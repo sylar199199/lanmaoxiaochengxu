@@ -1,0 +1,23 @@
+/* component/toast/toast.wxss */.wx-toast-box{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  top: 45%;
+  /* opacity: 1; */
+}
+.wx-toast-content{
+  max-width: 80%;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  background: rgba(0, 0, 0, 0.7);
+}
+.wx-toast-toast{
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  letter-spacing: 4rpx;
+}

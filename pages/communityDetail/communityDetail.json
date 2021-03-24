@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "usercenterNavbar": "/component/usercenterNavbar/usercenterNavbar",
+    "authorize": "/component/authorize/authorize",
+    "Authorizephone": "/component/authorizephone/authorizephone"
+  }
+}

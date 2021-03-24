@@ -1,0 +1,24 @@
+<view class="poster">
+    <view class="postercontent" style="height: {{contentheight}}rpx">
+        <view class="postermobile" style="top:{{top}}rpx">
+            <image src="{{preurl}}" class='preimg'></image>
+            <image class='posterperson' src='https://oss.ifxj.com/lanmao/health/posterperson.png'></image>
+            <view class="{{testtrue?'saveButton':'saveButton smallsaveButton'}}" bindtap="savePhone">保存到相册</view>
+        </view>
+    </view>
+    <view class='footer'>
+          <view class='tabBox'>
+           <scroll-view class="coupon-scroll-view_x" scroll-x="true" scroll-with-animation="true" id="scroll-view" scroll-left="{{ scrollLeft }}">
+                <view class="flow-items {{ item.isSelected ? 'flow-items-selected':'' }}" wx:for="{{ couponData }}" wx:key="{{ item.id}}"  >
+                    {{ item.name }}
+                </view>
+            </scroll-view>
+            <scroll-view scroll-with-animation="true" class='sceneBox' id="scroll-view_h" scroll-left="{{ scrollBoxLeft }}" scroll-x>
+              <view bindtap="_evalutionItemClick" data-item="{{ item }}" id="scroll-item-{{ item.id }}" class="scroll-view-item_H " wx:for='{{sceneList}}'>
+                <image class="evalutionImg {{item.isSelected?'selectEvalution':'' }}" src='{{item.imgUrl}}'></image>
+              </view>
+          </scroll-view>
+        </view>
+         <!-- <image class="bgbottomImg" src="https://oss.ifxj.com/lanmao/health/posterbottom.png"></image> -->
+  </view>
+</view>

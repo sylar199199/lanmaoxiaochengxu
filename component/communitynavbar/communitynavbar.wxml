@@ -1,0 +1,9 @@
+<!--components/navbar/index.wxml-->
+<view class="tabNav" style='height:{{navHeight}}rpx;background:{{bgColor}};line-height:{{navHeight}}rpx;'>
+  <view class="tabBox" style='height:{{navHeight}}rpx;'>
+  <image class='goPublishIcon'  bindtap='goPublish' src='{{addpublish}}'></image>
+      <view class='flexbox'>
+        <view class="tabText"  style='display: inline-block;' wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{tabIndex==index ? 'cur' : ''}}"><text>{{item}}</text></view>
+      </view>
+  </view>
+</view>

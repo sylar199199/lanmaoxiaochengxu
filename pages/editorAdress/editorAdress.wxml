@@ -1,0 +1,37 @@
+<view class='editorAdress'>
+  <view class='firstBox'></view>
+  <view class='editorBox'>
+    <view class="section colorBlack font30">
+      联系人：
+      <input type='text' data-type="contact"  bindblur="changeValue" class='colorBlack font30 inputBox' value="{{contact}}" />
+    </view>
+    <view class="section colorBlack font30">
+      手机号：
+      <input type='tel' data-type="tel" bindblur="changeValue" class='colorBlack font30 inputBox' value="{{tel}}" />
+    </view>
+    <view class="section colorBlack font30">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          省市区： {{province}}-{{city}}-{{district}}
+        </view>
+      </picker>
+    </view>
+    <view class="section colorBlack font30">
+      收货地址：
+      <textarea data-type="detailAddress"  bindblur="changeValue" class='colorBlack font30 inputBox textareaBox' auto-height value="{{detailAddress}}"></textarea>
+    </view>
+  </view>
+  <view class='editorBox wxAdressBox flexBetween' bindtap="useWxadress">
+    <view class='wxAdressLeft'>
+      <image class='wxIcon' src='https://oss.ifxj.com/lanmao/health/wxSelect.png'>
+      </image>
+      <text class='colorBlack font28'>可以直接使用微信地址</text>
+    </view>
+    <view class='wxAdressLeft'>
+      <text class='colorRed font28'>立即使用</text>
+      <image class='rightIcon' src='https://oss.ifxj.com/lanmao/health/SpctIcon.png'>
+      </image>
+    </view>
+  </view>
+  <view class='payButton font32 colorfff' bindtap='saveAdress'>保存地址</view>
+</view>

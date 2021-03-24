@@ -1,0 +1,291 @@
+/* pages/communityDetail/communityDetail.wxss */
+.userInfoBox{
+    margin: 16rpx 28rpx;
+    align-items: center;
+}
+.nickUrl{
+    height: 60rpx;
+    width: 60rpx;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right: 16rpx;
+}
+.addText{
+    margin-right: 6rpx;
+}
+.carousel{
+    width: 100%;
+    background-color: rebeccapurple;
+  }
+  .carousel_swiper{
+    width: 100%;
+    height: 1000rpx;
+    display: block;
+    position: relative;
+    background: #fff;
+  }
+  .carouselImg{
+    width: 100%;
+    height: 1000rpx;
+  }
+  .detailInfo{
+      padding: 28rpx;
+      border-bottom: 10rpx solid #f5f5f4;
+  }
+  .content{
+      margin: 26rpx 0;
+  }
+  .usernickUrl{
+      height: 53rpx;
+      width: 53rpx;
+      border-radius: 50%;
+      margin-right: 24rpx;
+  }
+  .commentsBox{
+    padding: 28rpx;
+  }
+  .inputBox{
+    align-items: center;
+  }
+  .pinglun{
+      display: inline-block;
+      vertical-align: middle;
+      height: 23rpx;
+      width: 23rpx;
+      margin: 0 24rpx;
+  }
+  .count{
+      margin-left: 8rpx;
+  }
+  .parentuserHeadimgurl{
+    height: 54rpx;
+    width: 54rpx;
+    border-radius: 50%;
+    margin-right: 14rpx;
+    flex-shrink: 0
+  }
+  .commutInput{
+      margin: 40rpx 0;
+      width: 620rpx;
+      height: 62rpx;
+      border-radius: 36rpx;
+      background: #f6f6f6;
+      line-height: 62rpx;
+      align-items: center;
+  }
+  .inputText{
+      display: inline-block;
+      height: 60rpx;
+      line-height: 60rpx;
+      width: 550rpx;
+  }
+  .parentcontent {
+      margin: 16rpx 0;
+  }
+  .childInfo {
+      margin-top: 30rpx;
+  }
+  .userNickname{
+      margin-left: 10rpx;
+  }
+  .lickIcon{ 
+      height: 40rpx;
+      width: 43rpx;
+      margin: 0 6rpx 0 0rpx;
+  }
+  .footIcon{
+      height: 40rpx;
+      width: 40rpx;
+      margin: 0rpx 6rpx 0 0rpx;
+  }
+  .zhuanfaicon{
+    height: 40rpx;
+    width: 48rpx;
+    margin: 0 6rpx 0 0rpx;
+  }
+  .footInput{
+      width: 370rpx;
+      margin-left: 14rpx;
+      margin-right: 30rpx;
+  }
+  .topicBox{
+    padding: 10rpx 20rpx;
+    background: #FBE6E6;
+    border-radius: 10rpx;
+    border-radius: 26rpx;
+    display: inline-block;
+    margin: 26rpx 0 0;
+
+  }
+  .footInputtext{
+      width: 330rpx;
+  }
+  .flexBox{
+    display: flex;
+		flex-direction: column;
+
+  }
+  .infoContent{
+    flex: 1;
+  }
+  .footer{
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      background: #fff;
+      height: 76px;
+  }
+  .widthBox1{
+    display: inline-block;
+    margin-right: 28rpx;
+    padding: 4rpx;
+    margin-top: 3rpx;
+  }
+  .widthBox{
+    display: inline-block;
+    margin-right: 16rpx;
+    padding: 4rpx;
+    margin-top: 3rpx;
+    width:50rpx;
+  }
+  .addText{
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: -2rpx;
+  }
+  .model {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    }
+    .input-box {
+      position: absolute;
+      background-color: #f8f8f8;
+      padding: 30rpx;
+      left: 0;
+      right: 0;
+      z-index: 103;
+    }
+    
+    .textarea {
+    background-color: #fff;
+    width: 100%;
+    padding: 5rpx;
+    height: 120rpx;
+    font-size: 15px;
+    position: static;
+    }
+    .commentContent{
+        margin-bottom: 20rpx;
+    }
+    .send {
+        font-size: 14px;
+        margin-top: 5rpx;
+        float: right;
+        position: static;
+        border-radius: 20px;
+        background: #ed5548;
+        color: #fff;
+        display: inline-block;
+        height: 60rpx;
+        width: 150rpx;
+        line-height: 60rpx;
+        text-align: center;
+        margin-top: 12rpx;
+    }
+    .nomore{
+        text-align: center;
+    }
+    .invisible_model{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        z-index: 102;
+    }
+    .overhidden{
+      overflow: hidden;
+    }
+
+    /* //授权弹框 */
+
+    .authorize{
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        position: fixed;
+        z-index: 1002;
+    }
+    .authorizeContent{
+        text-align: center;
+        position: absolute;
+        width: 700rpx;
+        height: 795rpx;
+        left: 50%;
+        margin-left: -350rpx;
+    }
+    .bacImg{
+        width: 700rpx;
+       height: 795rpx;
+     }
+      .postInfo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    .careButton {
+      background: #f9e600;
+      height: 60rpx;
+      width: 158rpx;
+      line-height: 60rpx;
+      border-radius: 35rpx;
+      text-align: center;
+    }
+    .editorButton{
+      background: #ed5548;
+      height: 52rpx;
+      width:127rpx;
+      line-height: 52rpx;
+      border-radius: 26rpx;
+      text-align: center;
+      color: #fff;
+      margin-right: 20rpx;
+    }
+    .deleteButton{
+      background: #dbdbdb;
+      height: 52rpx;
+      width:127rpx;
+      line-height: 52rpx;
+      border-radius: 26rpx;
+      text-align: center;
+    }
+    .shareButton{
+      position: absolute;
+      height: 60rpx;
+      width: 127rpx;
+      right: 220rpx;
+
+    }
+    button {
+      border-radius: 0;
+      background-color:rgba(255,255,255,0);
+     z-index: 101;
+    }
+    .button-hover {
+     background-color:rgba(255,255,255,0);
+    }
+    .shareIcon{
+      position: absolute;
+      top: -100rpx;
+      margin-top: 0;
+      z-index: 100;
+    }
+    button::after {
+      border: none;
+    }

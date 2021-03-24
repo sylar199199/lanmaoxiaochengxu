@@ -1,0 +1,39 @@
+<view>
+    <view class='authorize' wx:if='{{showAuthorize}}'>
+        <view class='authorizeContent' style='top: {{infotop}}px'>
+            <image class='bacImg' src='{{bacImg}}'></image>
+            <button class='authorizeButton' open-type="getUserInfo" catchgetuserinfo="getUserInfo" disabled="{{isDisabled}}">
+            </button>
+            <!-- <view style="color: #fff;">{{inviteUserId}},{{inviteType}}</view> -->
+            <view class='cancleBox' wx:if="{{!inviteUserId}}">
+                <image bindtap="closeAuthorize" class='colseCode' src='https://oss.ifxj.com/lanmao/health/closeShouquan.png'>
+                </image>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class='authorizephone xieyiauthorize' wx:if='{{showxieyi}}'>
+            <view class='xieyiContent' style='top: {{xieyitop}}px'>
+            <image class='colseCode' bindtap="closeXieyi" src='https://oss.ifxj.com/lanmao/health/colseCode.png'> </image>
+            <view class='font24 colorBlack contentBox'>
+                <rich-text class='description' nodes="{{content}}"></rich-text>
+            </view>
+            </view>
+        </view>
+
+        <view class='authorizephone' wx:if='{{showAuthorizephone}}'>
+            <view class='authorizeContentphone' style='top: {{phonetop}}px'>
+                <image class="phoneurl" src='https://oss.ifxj.com/lanmao/health/phoneurl.png'></image>
+                <!-- <image class='colseCode' bindtap="closeshowAuthorizephone" src='https://oss.ifxj.com/lanmao/health/shanchuyellow.png'></image> -->
+                <button class='phoneauthorizeButton' open-type="getPhoneNumber" bindgetphonenumber="getphonenumber" disabled="{{isDisabled}}">
+                    微信手机号授权并注册
+                </button>
+                <view class='xieyi font24' >
+                    我已阅读并同意<text class='yinsi' bindtap='yinsi'>《隐私政策》</text>和
+                    <text bindtap='zhuce' class='yinsi'>《用户服务协议》</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

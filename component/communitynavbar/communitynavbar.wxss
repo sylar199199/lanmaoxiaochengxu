@@ -1,0 +1,31 @@
+.tabNav{z-index: 4; position: fixed; top:0;left:0; width:100%;  background: #fff; display: flex;border-bottom:1px solid #f5f5f5; box-sizing: border-box; }
+.tabNav> view:last-child{ margin-right: 0;}
+.tabNav> view text{margin:0 50rpx;font-size: 30rpx;display:inline-block;color: #666;position: relative;}
+.tabNav .cur text{color:#000;font-weight:600; }
+.tabNav .cur text::after { 
+  position: absolute;
+  content: '';
+  background: #ed5548;
+  height: 8rpx;
+  width: 60rpx;
+  bottom: 0;
+  left: 0;
+  border-radius: 5rpx;
+}
+.tabNav .tabBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.tabText{
+  display: inline-block;
+}
+.goPublishIcon{
+  height: 50rpx;
+  width: 50rpx;
+  position: absolute;
+  top: 7px;
+  left: 30rpx;
+}

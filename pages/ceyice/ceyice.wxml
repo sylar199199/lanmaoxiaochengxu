@@ -1,0 +1,5 @@
+<!--pages/ceyice/ceyice.wxml-->
+<view>
+<web-view  src="{{url}}"></web-view>
+</view>
+ 

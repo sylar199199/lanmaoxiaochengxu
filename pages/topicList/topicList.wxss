@@ -1,0 +1,124 @@
+/* pages/community/community.wxss */
+page{
+    width: 100%;
+    margin: 0;
+    background: #f6f6f6;
+  }
+  .content{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .img_item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0rpx 10rpx 20rpx 15rpx;
+    width: 350rpx;
+  }
+  .imgBox{
+    width: calc(100%/2);
+    width: 350rpx;
+    background: #fff;
+    border-radius: 10rpx;
+    margin-top: 20rpx;
+    padding-bottom: 20rpx;
+    margin-right: 10rpx;
+  }
+  .imgUrl{
+    max-height: 480rpx;
+    max-width: 350rpx;
+    border-radius: 10rpx 10rpx 0 0;
+  }
+  .rightItem{
+    margin-left: 10rpx;
+    margin-right: 15rpx;
+  }
+  .pic{
+    border-radius: 10rpx;
+    width: 345rpx;
+  }
+  .nickUrl{
+    height: 46rpx;
+    width: 46rpx;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12rpx;
+  }
+  .nolikeicon,.likeicon{
+    height: 27rpx;
+    width: 30rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12rpx;
+  }
+  .title{
+    margin: 12rpx 15rpx;
+    font-weight:600;
+  }
+  .nickNameBox{
+    margin: 0 15rpx;
+  }
+  .nickName{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .publishBox{
+    position: fixed;
+    width: 165rpx;
+    height:165rpx;
+    bottom: 30rpx;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    left: 292rpx;
+  
+  }
+  .publishIcon{
+    height: 165rpx;
+    width: 165rpx;
+    text-align: center;
+  }
+  .bricklayout {
+    display: flex;
+  }
+  .spanhalf {
+    width: 49.5vw;
+  }
+   
+  .spanall {
+    width: 100vw
+  }
+   
+  .brickcolumn-l {
+    margin-right: 1vw;
+  }
+  .loading{
+    text-align: center;
+    color: #999;
+    font-size: 22rpx;
+    padding-bottom: 10rpx;
+  }
+  .lzy-loading{
+    margin-right: 20rpx;
+    float: left;
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    border: 1px solid #f0f0f0;
+    border-left: 1px solid #6190E8;
+    animation: load 1s linear infinite;
+    -webkit-animation: load 1s linear infinite;
+  }
+  @-webkit-keyframes load
+  {
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+  }
+  @keyframes load
+  {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+  }

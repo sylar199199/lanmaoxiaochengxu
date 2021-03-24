@@ -1,0 +1,29 @@
+/* components/navbar/index.wxss */
+.headIcon{
+  height: 30rpx;
+  width: 32rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  border-radius: 50%;
+  padding: 10rpx;
+  margin-left: 8rpx;
+}
+.headText{
+  display: inline-block;
+  vertical-align: middle;
+}
+.navbar{
+  width: 150rpx;
+  overflow: hidden;
+  position: fixed;
+  height: 66rpx;
+  border-radius: 0 60rpx 60rpx 0;
+  bottom: 300rpx;
+  left: 0;
+  z-index: 1000;
+  flex-shrink: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+

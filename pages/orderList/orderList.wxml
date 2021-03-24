@@ -1,0 +1,137 @@
+<view class='panel base-padding base-margin-bottom cate-data'>
+  <view class='authorize' wx:if='{{showexpress}}'>
+    <view class='authorizeContent' style='top: {{top}}px'>
+    <image class='colseCode' bindtap="closeExpress" src='https://oss.ifxj.com/lanmao/health/colseCode.png'> </image>
+    <view class='copyButton colorRed fontweight' bindtap='copyText' data-text="{{express.expressNo}}">复制</view>
+      <view class='expressBox'>
+        <view class='logoText font30 colorBlack flex'>
+          <view class='textLable'>快递公司：</view>
+          <view class='lableText'>{{express.expressName}}</view>
+        </view>
+        <view class='logoText font30 colorBlack flex'>
+          <view class='textLable'>运单号：</view>
+          <view class='lableText'>{{express.expressNo}}</view>
+        </view>
+         <view class='logoText font30 colorBlack flex'>
+          <view class='textLable'>发货时间：</view>
+          <view class='lableText'>{{time}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+   <view class='authorize' wx:if='{{showexDetail}}'>
+    <view class='authorizeContent authorizeContent1' style='top: {{top1}}px'>
+    <image class='colseCode' bindtap="closeExpress" src='https://oss.ifxj.com/lanmao/health/colseCode.png'> </image>
+      <view class='expressBox'>
+        <view class='logoText font30 colorBlack flex'>
+          <view class='textLable'>联系人：</view>
+          <view class='lableText'>{{consignee.name}}</view>
+        </view>
+        <view class='logoText font30 colorBlack flex'>
+          <view class='textLable'>手机号：</view>
+          <view class='lableText'>{{consignee.phone}}</view>
+        </view>
+         <view class='logoText font30 colorBlack flex'>
+          <view class='textLable'>省市区：</view>
+          <view class='lableText'>{{consignee.province+consignee.city+consignee.district}}</view>
+        </view>
+         <view class='logoText font30 colorBlack flex'>
+          <view class='textLable'>收货地址：</view>
+          <view class='lableText'>{{consignee.address}}</view>
+        </view>
+         <view class='logoText font30 colorBlack flex'>
+          <view class='textLable'>订单备注：</view>
+          <view class='lableText' wx:if="{{mark}}">{{mark}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='container'>
+    <!--Tab布局-->
+    <view class='title'>
+      <view class='titleSel' bindtap='titleClick' data-idx='{{index}}' data-status='{{item.status}}' wx:key="{{item.name}}" wx:for="{{tabData}}">
+        <text class="{{index == currentIndex ? 'font28 fontweight colorRed' : 'font28 fontweight colorBlack'}}">
+      {{item.name}}
+      </text>
+        <hr class="{{index == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+      </view>
+    </view>
+    <!--内容布局-->
+    <block wx:if="{{!noData}}">
+      <view class='itemList' wx:for="{{contentlist}}" wx:for-item="item" wx:key="{{item.time}}" wx:for-index="index">
+        <view class='goodsBox margintop'>
+          <view class='goodsInfo flexBetween paddingNOne' style="align-items: center;">
+            <view>
+               <view class="colorBlack font24" wx:if='{{item.isShow}}'>
+                  距离关闭订单<text wx:if='{{item.hour && item.minute && item.second}}' style="margin-left: 10rpx;" class="colorRed">{{item.hour}}:{{item.minute}}:{{item.second}}</text>
+               </view>
+            </view>
+            <view class='colorRed font26'>
+              {{item.statiusText}}
+            </view>
+          </view>
+          <view class='goodsInfo flexBetween'>
+            <view class='flex goodsimgInfo'>
+              <image class='goodsImg' wx:if="{{item.goodsImgUrl}}" src='{{item.goodsImgUrl}} '></image>
+              <view class='info'>
+                <view class='font28 colorBlack'>{{item.goodsName}}</view>
+                <view class='font24 colorBlack specsName'>{{item.specName}}</view>
+              </view>
+            </view>
+            <view class='font24 colorGrey'>
+              <view class='colorBlack font26'>¥{{item.goodsPrice}}</view>
+              <view class='colorGrey font26'>x1</view>
+            </view>
+          </view>
+          <view class='goodsInfo flexBetween'>
+            <view>
+
+            </view>
+            <view class='colorBlack font26'>
+              <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+              <text class='colorBlack font26 marginleft'>枸杞：</text>
+              <text class='colorBlack font26'>-{{item.points}}</text>
+            </view>
+          </view>
+          <view class='goodsInfo flexBetween paddingbottom'>
+            <view>
+            </view>
+            <view class='colorBlack font26'>
+              <text class='colorBlack font26'>实付：</text>
+              <text class='colorBlack fontweight font26'>¥{{item.goodsPrice}}</text>
+            </view>
+          </view>
+          <view class='goodsInfo flexBetween borderTop paddingbottom' wx:if="{{item.express}}">
+            <view class='colorBlack font26 borderButton' data-mark="{{item.remark}}" data-consignee='{{item.consignee}}' bindtap="getconsignee">
+              查看详情
+           </view>
+            <view  class='colorBlack font26 borderButton' data-express='{{item.express}}' bindtap="getExpress">
+              查看物流
+            </view>
+          </view>
+           <view class='goodsInfo flexBetween borderTop paddingbottom' wx:elif="{{item.status == 1 && item.isShow}}">
+              <view class='colorBlack font26 borderButton' data-mark="{{item.remark}}" data-consignee='{{item.consignee}}' bindtap="getconsignee">
+                查看详情
+              </view>
+            <view class='colorBlack font26 borderButton redBacButton' data-item='{{item}}' bindtap="payOrder">
+              立即支付
+            </view>
+          </view>
+           <view class='goodsInfo flexBetween borderTop paddingbottom' wx:else>
+              <view  >
+              </view>
+             <view class='colorBlack font26 borderButton' data-mark="{{item.remark}}" data-consignee='{{item.consignee}}' bindtap="getconsignee">
+                查看详情
+              </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class='noDataBox' wx:if="{{noData}}">
+      <image class='nodataImg' src='https://oss.ifxj.com/lanmao/health/noOrder.png'></image>
+      <view class='nodataText font26 colorBlack'>暂无订单</view>
+    </view>
+  </view>
+  <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+  <!-- <view class="loading" hidden="{{!searchLoadingComplete || contentlist.length == 0}}">已加载全部</view> -->
+</view>

@@ -1,0 +1,14 @@
+<!--components/navbar/index.wxml-->
+<view class="navbar custom-class" style='height:{{navHeight}}px;'>
+  <view wx:if="{{showNav}}" class="navbar-action-wrap navbar-action-group row item-center" style='top:{{navTop}}px;background:#fff2f2;'>
+    <view class='showCount' bindtap="goPoints">
+      <image class='headIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+      <text class='headText'>{{countNumber}}枸杞</text>
+    </view>
+      <!-- <ss-icon name="back" color="{{iconColor}}" size="15px" block="{{true}}" class="navbar-action_item" bind:click="_navBack"></ss-icon>
+      <ss-icon name="index" color="{{iconColor}}" size="15px" block="{{true}}" class="navbar-action_item last" bind:click="_toIndex"></ss-icon> -->
+  </view>
+  <view class='navbar-title' style='top:{{navTop}}px'>
+    {{pageName}}
+  </view>
+</view>

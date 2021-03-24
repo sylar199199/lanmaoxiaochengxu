@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "usercenterNavbar": "/component/usercenterNavbar/usercenterNavbar"
+  }
+}

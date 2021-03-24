@@ -1,0 +1,133 @@
+/* pages/poster.wxss */
+.poster{
+    height:100%;
+}
+
+.preimg{
+    position: absolute;
+    left: 50%;
+    margin-left: -205rpx;
+    height: 730rpx;
+    width: 410rpx;
+    top: 42rpx;
+    border-radius: 20rpx;
+}
+.saveButton{
+    background: -webkit-linear-gradient(top,#f0b976,#ee8036);
+    height: 52rpx;
+    width: 282rpx;
+    line-height: 52rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 22rpx;
+    position: absolute;
+    left: 89rpx;
+    top: 800rpx;
+}
+.smallsaveButton{
+  -webkit-animation: free_download 0.2s linear alternate 1;
+  animation: free_download 0.2s linear alternate 1;
+}
+@-webkit-keyframes free_download{
+  0%{-webkit-transform:scale(0.9);}
+  100%{-webkit-transform:scale(1);}
+}
+@keyframes free_download{
+  0%{transform:scale(0.9);}
+  100%{transform:scale(1);}
+}
+
+.postercontent {
+    width: 100%;
+    background-image: url("https://oss.ifxj.com/lanmao/health/postertop.png");
+    background-size: cover;
+    -moz-background-size:100% 100%;
+    background-repeat:no-repeat;
+  }
+  .postermobile{
+    position: absolute;
+    width: 460rpx;
+    height: 875rpx;
+    left: 50%;
+    margin-left: -230rpx;
+    background-image: url("https://oss.ifxj.com/lanmao/health/mobileback.png");
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    background-repeat:no-repeat;
+  }
+  .posterperson{
+    position: absolute;
+    height: 322rpx;
+    width: 194rpx;
+    bottom: -6rpx;
+    left: -128rpx;
+
+  }
+
+.footer {
+    box-shadow: -8rpx 18rpx 76rpx 0px rgba(0,0,0,0.09);
+    background-image: url("https://oss.ifxj.com/lanmao/health/posterbottom.png");
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 284rpx;
+    position: fixed;
+    bottom: 0;
+  }
+  .tabBox{
+    padding: 20rpx 30rpx;
+  }
+  .coupon-scroll-view_x{
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing:border-box;
+  }
+  .flow-items{
+      box-sizing:border-box;
+      margin-right: 76rpx;
+      display: inline-block;
+      line-height: 45rpx;
+      height: 45rpx;
+      font-size: 28rpx;
+  }
+   .flow-items:before{
+        display: inline-block;
+        content: '';
+        height: 25rpx;
+        width: 4rpx;
+        background:#152b48;
+   }
+  .flow-items-selected{
+      color: #ec3a4e;
+  }
+  .sceneBox{
+    width: 100%;
+    white-space: nowrap;
+    padding-top: 22rpx;
+  }
+  .scroll-view-item_H{
+    width: 99rpx;
+    height: 176rpx;
+    margin-right: 45rpx;
+    display: inline-block;
+  }
+  /* .scroll-view-item_H:first-child{
+    border-right:  1px solid #E2E2E2;
+    padding-right: 20rpx;
+    margin-right: 20rpx;
+  } */
+  .selectEvalution{
+    border: 1px solid #ec3a4e;
+  }
+  .evalutionImg{
+      width: 99rpx;
+      height: 176rpx;
+      border-radius: 5rpx;
+  }
+  ::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+  }

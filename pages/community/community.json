@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "小兴趣",
+  "usingComponents": {
+    "communitynavbar": "/component/communitynavbar/communitynavbar",
+    "authorize": "/component/authorize/authorize",
+    "Authorizephone": "/component/authorizephone/authorizephone"
+  }
+}

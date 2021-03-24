@@ -1,0 +1,161 @@
+<view class='view-page'>
+  <view class='authorizezhegai' catchtouchmove="true"  wx:if='{{showYindao}}'  bindtap="closeYindao">
+   
+    <!-- <view class='authorizeyindao'></view> -->
+    <view class='yindaoContent'>
+      <image class='yindaoone' src='https://oss.ifxj.com/lanmao/health/yindaoone1.png'></image>
+      <image class='yindaothree' src='https://oss.ifxj.com/lanmao/health/yindaothree.png'></image>
+      <image class='yindaotwo' src='https://oss.ifxj.com/lanmao/health/yindaotwo.png'></image>
+    </view>
+  </view>
+    <Authorizephone showAuthorizephone="{{showAuthorizephone}}"  code="{{code}}" bind:phonevent="phonevent"></Authorizephone>
+  <authorize showAuthorize="{{showAuthorize}}" source='{{source}}' bind:myevent="onevent"></authorize>
+ <view class='authorize authorizecode' wx:if='{{showCode}}'>
+    <view class='authorizecodeContent' style='top: {{codeTop}}px'>
+      <image bindtap='closeCode' class='colseCode' src='https://oss.ifxj.com/lanmao/health/colseCode.png'></image>
+      <image class='codeImg gzhcode' data-src='https://oss.ifxj.com/lanmao/health/gzhcode.jpg' src='https://oss.ifxj.com/lanmao/health/gzhcode.jpg' bindtap='previewImage'></image>
+     
+      <view class='logoText font28 colorBlack'>
+           <image  class="jiantou" src='https://oss.ifxj.com/lanmao/health/jiantouxiangshang.png'></image>
+          <view>扫码关注公众号，第一时间get盲盒上新</view>
+      </view>
+      <image class='codeImg' data-src='https://oss.ifxj.com/lanmao/health/erweimaCode.jpg' src='https://oss.ifxj.com/lanmao/health/erweimaCode.jpg' bindtap='previewImage'></image>
+      <view class='logoText font28 colorBlack'>
+        <image  class="jiantou" src='https://oss.ifxj.com/lanmao/health/jiantouxiangshang.png'></image>
+        <view>保存图片，扫码可以找到我</view>
+        </view>
+      <view class='authorizeTextcode font24 color6276'>
+        客服二维码
+      </view>
+    </view>
+  </view>
+
+  <!-- <navbar page-name="{{navBarName}}" countNumber='{{countNumber}}'></navbar> -->
+  <toast id='toast'>
+  </toast>
+  <view class='page-content'>
+   
+    <!--这里放你的内容-->
+    <view class="doommview">
+      <view class='showCount' bindtap="goPoints" wx:if="{{hasLogin && hasData}}">
+        <image class='headIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+        <text class='headText'>{{countNumber}}枸杞</text>
+      </view>
+      <view class='showCount'  bindtap="openAuthorize"  wx:if="{{!hasLogin && hasData}}">
+        <image class='headIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+        <text class='headText'>用户登录</text>
+      </view>
+      <view wx:for="{{doommData}}" wx:key="id">
+        <view wx:if="{{item.display}}" class="{{item.type === 1?'aon':'aon1'}}" style="animation: first {{item.time}}s linear forwards;top:{{item.top}}rpx;">
+          {{item.userName}}<text wx:if="{{item.type == 1}}">抢到了</text><text wx:if="{{item.type == 2}}">获得了</text>{{item.goodsName}}
+        </view>
+      </view>
+    </view>
+    <image class='swiperImg' src='{{bacImg}}'></image>
+    <view class="buttonBox" bindtap="openAuthorize"  wx:if="{{!hasLogin}}">
+      <image  class="nologinButton" src='{{nologinButtonimg}}'></image>
+     </view>
+     <view class="surround-box"  wx:if="{{!hasLogin}}">
+       <image class='ipImg'  src='{{ipImg}}'></image>
+      </view>
+    <view class="surround-box"  wx:if="{{hasLogin}}">
+      <image class='ipImg' wx:if="{{totalPoints&&(totalPoints < adultPoints)}}" src='{{ipImg}}'></image>
+      <image class='BigipImg' wx:if="{{totalPoints&&(totalPoints >= adultPoints)}}" src='{{adultImgUrl}}'></image>
+      <view wx:for='{{showItems}}' class="collectBox" wx:key='{{item.id}}' wx:index='{{index}}' style='height: 120rpx;width: 120rpx;position: absolute;z-index: 999;right: {{item.size.right}}rpx;top: {{item.size.top}}rpx' data-index="{{ index }}" data-item="{{item}}" bindtap="collect">
+          <image class='{{showindex==index?"qiIcon":"qiIcon none"}}' id="gouqi-{{index}}" animation="{{animation}}"  src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+          <image class='{{showindex==index?"qiIcon":"qiIcon none"}}' animation="{{animation1}}"  src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+          <image class='{{showindex==index?"qiIcon":"qiIcon none"}}' animation="{{animation2}}"  src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+          <view class="{{item.overTime?'circlecover circle':'circle'}}" >
+            <image class='imgStyle' src='{{item.imgUrl}}'></image>
+            <text class='dojishiText'>{{item.ruleName}}</text>
+          </view>
+      </view>
+    </view>
+    <view class="circleLeft">
+      <image bindtap="goPoser" class='cursonBox shareIcon' src='{{yaoqing}}'></image>
+    </view>
+    <view class="circleright">
+      <image class='cursonBox' bindtap="gomanghe" src='https://oss.ifxj.com/lanmao/health/manghe0109.png'></image>
+      <image class='cursonBox' bindtap="openCode" src='https://oss.ifxj.com/lanmao/health/kefu20219.png'></image>
+      <image class='cursonBox' bindtap="goGonglue" src='https://oss.ifxj.com/lanmao/health/gonglue.png'></image>
+    </view>
+<view class="example" wx:if="{{noticecontent}}">
+   <image src="{{tongzhi}}" class="tongzhi"></image>
+  <view class="marquee_box">
+    <view class="marquee_text" style="{{orientation}}:{{marqueeDistance}}px;font-size: {{size}}px;">
+      {{noticecontent}}
+    </view>
+  </view>
+</view>
+<!-- <view> 出现白边后即显示</view>
+<view class="example">
+  <view class="marquee_box">
+    <view class="marquee_text" style="{{orientation}}:{{marqueeDistance2}}px;font-size: {{size}}px;">
+      <text>{{noticecontent}}</text>
+      <text wx:if="{{marquee2copy_status}}" style="margin-left:{{marquee2_margin}}px;">{{text}}</text>
+    </view>
+  </view>
+</view> -->
+  </view>
+  <view class="extraBox">
+      <view class="extraTitleBox">
+        <view class="eatraTitle flex alignCenter">
+          <text class="fontweight font36">完成任务获得更多枸杞</text>
+          <image class="gqIcon" src='https://oss.ifxj.com/lanmao/health/gqiIcon.png'></image>
+        </view>
+      </view>
+        <view class="extraContent">
+          <view class="flex flexBox borderLine">
+              <view class="flex centerBox">
+                <image  class="publishDt" src='{{dakaimgUrl}}'></image>
+                <view class="marginTop" style="width: 184rpx;">
+                  <view class="marginbottom">
+                      <text class="font30 fontweight marginright letter" >成就徽章</text>
+                  </view>
+                  <view class="colorGrey font24 marginright letter">连续打卡 <text class="font24 colorRed">{{userPunchCard.punchCardDays}}</text> <text class="colorGrey">/</text><text class="font24">{{totalDays}}</text></view>
+                </view>
+              </view>
+              <view class="margin10 font26" wx:for="{{medaldata}}" wx:key="{{days}}">
+                  <image class="hzIcon" wx:if="{{item.days <= userPunchCard.punchCardDays}}" src="{{item.lightImgUrl}}" ></image>
+                  <image class="hzIcon" wx:if="{{item.days > userPunchCard.punchCardDays || !userPunchCard}}" src="{{item.grayImgUrl}}" ></image>
+                  <view wx:if="{{item.days <= userPunchCard.punchCardDays}}" style="background:{{item.color}}" class="lightColor">{{item.points}}枸杞</view>
+                  <view wx:if="{{item.days > userPunchCard.punchCardDays || !userPunchCard}}" class="greycolor lightColor">{{item.points}}枸杞</view>
+              </view>
+          </view>
+          <view class="flexBetween flexBox borderLine" wx:for="{{activityData}}" wx:key="{{id}}">
+            <view class="flex centerBox">
+              <image  class="publishDt" src='{{item.imgUrl}}'></image>
+              <view class="marginTop">
+                <view class="marginbottom">
+                    <text class="font30 fontweight marginright letter">{{item.name}}</text>
+                    <text class="font24 colorRed"  wx:if="{{item.id != 32}}">{{item.completedCount}}</text>
+                    <text class="font24"  wx:if="{{item.id != 32}}">/{{item.quantity}}</text>
+                </view>
+                <view class="colorGrey font24 marginright letter">{{item.content}}</view>
+              </view>
+            </view>
+
+            <view class="goButton font26" data-item="{{item}}" wx:if="{{hasLogin}}" data-id="{{item.id}}" data-linkurl="{{item.linkUrl}}"  bindtap="goCommunity">
+                {{item.linkText}}
+              <button wx:if="{{item.id == 10}}" open-type='share' class='buttonNostyle'>
+              </button>
+            </view>
+            <view class="goButton font26"  wx:if="{{!hasLogin}}" bindtap="openAuthorize" >{{item.linkText}}</view>
+          </view>
+        </view>
+  </view>
+  <!-- <view bindtap='playcomplete'>完成</view> -->
+  <!-- <view bindtap='loadVideo'>完成</view> -->
+  <view class='tuiguangBox'>
+    <image class='tuiguangImg' src='{{tuiguang}}'></image>
+  </view>
+  <view class='officialBox'>
+    <official-account bindload="officialAccountLoadFuc"></official-account>
+    <view class='textBox'>
+      点击右上角的
+      <image class='shareCode' src='../images/shareIcon.png'></image>
+      把小兴趣儿「添加到我的小程序」
+    </view>
+    <view class='textView'>你可以更方便的赚取枸杞</view>
+  </view>
+</view>

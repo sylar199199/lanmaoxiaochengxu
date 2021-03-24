@@ -1,0 +1,6 @@
+<view class='paySucess'>
+  <image class='payIcon' src='https://oss.ifxj.com/lanmao/health/payIcon.png'></image>
+  <view class='payTextBlack font32 colorBlack'>支付成功</view>
+  <view class='parButton font32 colorfff' bindtap="goOrderlist">兑换列表</view>
+  <view class='goHome font32 colorBlack' bindtap="goHome">返回首页</view>
+</view>

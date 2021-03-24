@@ -1,0 +1,65 @@
+/* pages/editorAdress/editorAdress.wxss */
+.editorAdress{
+  height: 100vh;
+  background: #fcfcfc;
+}
+.firstBox{
+ height: 20rpx;
+ width: 100%;
+}
+.editorBox{
+  background: #fff;
+  box-shadow: 0 3rpx 18rpx 0 #f4f4f4;
+  padding: 0 20rpx;
+  margin: 0rpx 30rpx 70rpx;
+  border-radius: 15rpx;
+}
+.section{
+  min-height: 60rpx;
+  padding: 20rpx 0;
+  line-height: 60rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+.editorBox .section:nth-last-child(1){
+  border-bottom: none;
+}
+.inputBox{
+  width: 478rpx;
+  display: inline-block;
+  vertical-align: middle;
+  height: 60rpx;
+  /* border: 1px solid #f00; */
+  line-height: 60rpx;
+  margin-top: -5rpx;
+}
+.wxAdressBox{
+  line-height: 140rpx;
+}
+.textareaBox{
+  line-height: 35rpx;
+}
+.rightIcon{
+  height: 22rpx;
+  width: 11rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.wxIcon{
+  height: 40rpx;
+  width: 50rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.payButton{
+  position: fixed;
+  bottom: 50rpx;
+  left: 30rpx;
+  line-height: 90rpx;
+  height: 90rpx;
+  width: 690rpx;
+  background: #e15a4c;
+  border-radius: 45rpx;
+  text-align: center;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "communitynavbar": "/component/communitynavbar/communitynavbar",
+    "authorize": "/component/authorize/authorize"
+  }
+}

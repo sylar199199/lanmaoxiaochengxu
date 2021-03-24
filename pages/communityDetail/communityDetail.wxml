@@ -1,0 +1,140 @@
+<view class="{{showAuthorize?'detail overhidden':'detail'}}" id="j_page">
+    <usercenterNavbar></usercenterNavbar>
+    <wxs src="../../wxs/sub.wxs" module="tools" />
+    <Authorizephone showAuthorizephone="{{showAuthorizephone}}" code="{{code}}" bind:phonevent="phonevent"></Authorizephone>
+    <authorize showAuthorize="{{showAuthorize}}" source='{{source}}' bind:myevent="onevent"></authorize>
+    <!-- 评论框 -->
+    <view class='model' wx:if='{{inputBoxShow}}'>
+        <!-- invisible_model view 用于点击隐藏model评论框 -->
+        <view class='invisible_model' catchtap='invisible'></view>
+        <view class='input-box' style='bottom:{{height == ""?0:height}}px;'>
+            <textarea class="textarea" bindfocus='inputFocus' value="{{communitycontent}}" maxlength="2000" bindinput="handleContentInput" focus='{{focusInput}}' bindblur="inputBlur" placeholder="{{commentWarm}}" show-confirm-bar="{{false}}" adjust-position="{{false}}" auto-focus="{{true}}"></textarea>
+            <text class='send' bind:touchstart='sendCommunity'>发送</text>
+        </view>
+    </view>
+    <view class="flexBox">
+        <view class='infoContent' style="margin-bottom: 20px;">
+            <view class='userInfoBox flexBetween'>
+                <view class='postInfo' bindtap="goUsercenter">
+                    <image class="nickUrl" src="{{contentdata.userHeadimgurl}}"></image>
+                    <text class='nickname font26 fontweight'>{{contentdata.userNickname}}</text>
+                </view>
+                <view class='careButton flex alignCenter font28' style="justify-content: center;" wx:if="{{!iscare && showButton && !fromsource}}" bindtap='care'>
+                    <image class="addText" src="{{addIcon}}">+</image>
+                    <view>关注</view>
+                </view>
+                <view class='careButton font28' wx:if="{{iscare && showButton && !fromsource}}" bindtap='cancleCare'>
+                    已关注
+                </view>
+                <view wx:if="{{fromsource == 'person'}}" class="flex">
+                    <view class='editorButton font24' bindtap='gorelasedynamics'>编辑</view>
+                    <view class='deleteButton font24' bindtap='deletereleadynamics'>删除</view>
+                </view>
+            </view>
+            <view class='carousel'>
+                <swiper class='carousel_swiper' wx:if="{{imgs.length > 1}}" indicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#F9E600" autoplay="true" interval='3000' circular='true'>
+                    <block wx:for="{{imgs}}" wx:key="key">
+                        <swiper-item bindtap='chomeCarouselClick' data-url='{{item.imgUrl}}'>
+                            <image class="carouselImg" src='{{item.imgUrl}}' mode='aspectFit'></image>
+                        </swiper-item>
+                    </block>
+                </swiper>
+                <view class="carousel_swiper" wx:if="{{imgs.length == 1}}">
+                     <block wx:for="{{imgs}}" wx:key="key">
+                        <swiper-item bindtap='chomeCarouselClick' data-url='{{item.imgUrl}}'>
+                            <image class="carouselImg" src='{{item.imgUrl}}' mode='aspectFit'></image>
+                        </swiper-item>
+                    </block>
+                </view>
+            </view>
+            <view class="detailInfo">
+                <view class="title fontweight font32">{{contentdata.title}}</view>
+                <view class="topicBox font24" bindtap="goTopic">
+                    <text class="fontweight font26">#</text>
+                    {{contentdata.topicName}}
+                </view>
+                 <text  class="content font28 colorGrey" style="display: block">{{contentdata.content}}</text>
+                <!-- <view class="content font28 colorGrey">{{contentdata.content}}</view> -->
+                <view class="creatTime color999 font24">编辑于{{createDate}}</view>
+            </view>
+              <!-- <view>{{inviteUserId}},{{inviteType}}</view> -->
+            <view class="commentsBox" wx:if="{{status == 1}}" style="padding-bottom: 76px;">
+                <view class="commentCout font26">
+                    评论
+                    <text class='count color999'>{{comments.length}}</text>
+                </view>
+                <view class='inputBox flex'>
+                    <image class="usernickUrl" src="{{headImageUrl}}"></image>
+                    <view class='commutInput flex'>
+                        <image class="pinglun" src="https://oss.ifxj.com/lanmao/health/pinglun.png"></image>
+                        <text class='inputText footInputtext colorGrey font24' style="width: 580rpx;" bindtap='focusButn'>喜欢就评论告诉TA
+                        </text>
+                    </view>
+                </view>
+                <view class='commentContent' wx:for="{{comments}}" wx:key="key" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
+                    <view class="parentComment flex">
+                        <image class='parentuserHeadimgurl' data-userid="{{item.userId}}" bindtap="goUsercenter" src="{{item.userHeadimgurl}}"></image>
+                        <view class='parentInfo' data-parentCommentid="{{item.id}}" data-usernickname="{{item.userNickname}}" bindtap='replayCommunity'>
+                            <view class="parentname colorBlack font22" data-userid="{{item.userId}}">
+                                {{item.userNickname}}
+                            </view>
+                            <view class='parentcontent color41 font22'>{{item.content}}</view>
+                            <view class='parentupdateDate color999 font22'>
+                                {{tools.subday(item.updateDate)}}
+                            </view>
+                            <view class="childInfo flex" wx:for="{{item.childComments}}" wx:for-item="ite">
+                                <image class='parentuserHeadimgurl ' data-userid="{{ite.userId}}" catchtap="goUsercenter" src="{{ite.userHeadimgurl}}"></image>
+                                <view class='parentInfo' data-parentCommentid="{{item.id}}" data-replyid="{{ite.id}}" data-usernickname="{{ite.userNickname}}" catchtap='replayCommunity'>
+                                    <view class="replyUserName colorBlack font22" data-userid="{{ite.userId}}">
+                                        {{ite.userNickname}}
+                                    </view>
+                                    <view class='parentcontent color41 font22' wx:if="{{ite.replyId}}">
+                                        回复
+                                        <text class='userNickname'>{{ite.replyNickname}}:</text>
+                                        {{ite.content}}
+                                    </view>
+                                    <view class='parentcontent color41 font22' wx:if="{{!ite.replyId}}">
+                                        {{ite.content}}
+                                    </view>
+                                    <view class='parentupdateDate color999 font22'>
+                                        {{tools.subday(ite.updateDate)}}
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='nomore colorGrey font24'>- 暂时没有更多 -</view>
+            </view>
+        </view>
+       
+        <view class="footer flex aligncenter" wx:if="{{contentdata.status == 1}}">
+            <view class='commutInput footInput flex'>
+                <image class="pinglun" src="https://oss.ifxj.com/lanmao/health/pinglun.png"></image>
+                <text class='inputText footInputtext font24 colorGrey' bindtap='focusButn'>喜欢就评论告诉TA</text>
+            </view>
+            <view class="flex aligncenter">
+                <button open-type='share' class="shareButton"></button>
+                <image class='zhuanfaicon' wx:if='{{contentdata.shareCount == 0}}' src='https://oss.ifxj.com/lanmao/health/zhuanfagrey17.png'></image>
+                <image class='zhuanfaicon' wx:if='{{contentdata.shareCount != 0}}' src='https://oss.ifxj.com/lanmao/health/zhuanfa17.png'></image>
+                <text class=' colorGrey  widthBox' style="font-size: 10px;"  wx:if='{{contentdata.shareCount == 0}}'>转发</text>
+                <text class=' colorBlack widthBox' style="font-size: 10px;" wx:if='{{contentdata.shareCount != 0}}'>{{shareCount}}</text>
+            </view>
+           
+            <view class="flex aligncenter">
+                <image class='footIcon' bindtap='focusButn' wx:if='{{comments.length != 0}}' src='https://oss.ifxj.com/lanmao/health/pinglun17.png'></image>
+                <image class='footIcon' bindtap='focusButn' wx:if='{{comments.length == 0}}' src='https://oss.ifxj.com/lanmao/health/pinglun17grey.png'></image>
+                <text class=' colorGrey  widthBox' style="font-size: 10px;" bindtap='focusButn' wx:if='{{comments.length == 0}}'>评论</text>
+                <text class=' colorBlack widthBox' style="font-size: 10px;" bindtap='focusButn' wx:if='{{comments.length != 0}}'>{{commentslength}}</text>
+            </view>
+             <view class="flex aligncenter">
+                <image class='lickIcon' wx:if="{{isLike}}" bindtap='dianzan' src='{{likeicon}}'></image>
+                <image class='lickIcon' wx:if="{{!isLike}}" bindtap='dianzan' src='{{nolikegrey}}'></image>
+                <text class=' colorGrey widthBox' style="font-size: 10px;"  bindtap='dianzan' wx:if='{{likeCount == 0}}'>赞</text>
+                <text class="{{isLike?'colorBlack widthBox':'colorGrey widthBox'}}"  style="font-size: 10px;" bindtap='dianzan' wx:if='{{likeCount != 0}}'>{{likeCount}}</text>
+            </view>
+            
+            
+        </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navbar": "/component/navbar/navbar",
+    "toast": "/component/toast/toast",
+    "authorize": "/component/authorize/authorize",
+    "Authorizephone": "/component/authorizephone/authorizephone"
+  }
+}

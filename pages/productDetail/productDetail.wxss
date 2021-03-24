@@ -1,0 +1,416 @@
+/* pages/productDetail/productDetail.wxss */
+.goodsBox{
+  padding-bottom: 80rpx;
+}
+.homeTop {
+  height: 750rpx;
+  width: 100%;
+  position: relative;
+}
+.lineThroughBox{
+  display: inline-block;
+  border: 1px solid #f24e43;
+  background: #fbdbdb;
+  padding: 0 10rpx;
+}
+.homeTopImg {
+  height: 100%;
+  width: 100%;
+}
+.description{
+  padding-bottom: 20px;
+}
+.rich-img{
+  max-width:100%;
+  width:100%;
+  height:auto;
+}
+.swiperImg {
+  width: 750rpx;
+  height: 750rpx;
+}
+.dialogBox {
+  width: 750rpx;
+  height: 750rpx;
+  position: absolute;
+  z-index: 100;
+  background: rgba(0,0,0,0.52);
+  text-align: center;
+}
+.dialogImg {
+  width: 310rpx;
+  height: 310rpx;
+  margin: 170rpx auto;
+}
+swiper {
+  height: 750rpx;
+}
+
+.limitBox {
+  position: absolute;
+  height: 50rpx;
+  width: 227rpx;
+  line-height: 50rpx;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 100;
+  border-radius: 0 25rpx 25rpx 0;
+  margin-top: 90rpx;
+  padding-left: 14rpx;
+}
+.userRegDaysLimitbox{
+  margin-top: 25rpx;
+  position: absolute;
+  color: #fff;
+  background: #f24e43;
+  font-size: 26rpx;
+  height: 50rpx;
+  width: 140rpx;
+  line-height: 50rpx;
+  padding-left: 14rpx;
+  z-index: 100;
+  border-radius: 0 25rpx 25rpx 0;
+}
+
+.gouqiIcon {
+  width: 16rpx;
+  height: 24rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4rpx;
+}
+
+.qianggouBox {
+  background: -webkit-linear-gradient(0deg, #f6e1b0, #f3bacc);
+  width: 750rpx;
+  height: 100rpx;
+  padding: 10rpx 0;
+}
+
+.qianggouBoxGrey {
+  position: absolute;
+  bottom: 0;
+  background: #e4e4e4;
+  width: 750rpx;
+  height: 100rpx;
+}
+
+.qianggouTop {
+  padding: 0 30rpx;
+  margin-top: 6rpx;
+}
+
+.xianshiImg {
+  height: 27rpx;
+  width: 107rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 6rpx;
+}
+
+.qianggouBottom {
+  padding: 0 30rpx;
+}
+
+.markPrice {
+  margin: 0 26rpx 0 6rpx;
+}
+
+.borderTime {
+  display: inline-block;
+  line-height: 34rpx;
+  height: 34rpx;
+  min-width: 34rpx;
+  text-align: center;
+}
+
+.borderTimeLight {
+  background: #fff;
+  color: #000;
+}
+
+.borderTimeLight1 {
+  background: #5d4444;
+  color: #fff;
+}
+
+.borderTimeGrey {
+  background: #b4b2b1;
+  color: #fff;
+}
+
+.timeText {
+  margin: 0 6rpx;
+}
+
+.daojishione {
+  margin-top: 8rpx;
+  margin-left: 20rpx;
+}
+
+.bottomRight {
+  width: 200rpx;
+  height: 90rpx;
+  color: #fff;
+  background: #f24e43;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 45rpx;
+  margin: 10rpx 18rpx;
+}
+
+.greyButton {
+  background: #b4b2b1;
+}
+
+.goodsInfo {
+  margin: 30rpx;
+  padding-bottom: 40rpx;
+  flex-wrap: wrap;
+}
+
+.goodsImg {
+  max-height: 182rpx;
+  height: 182px;
+  width: 182rpx;
+  margin-right: 30rpx;
+}
+
+.info {
+  position: relative;
+  flex: 1;
+}
+
+.specsName {
+  position: absolute;
+  bottom: 0;
+}
+
+.guigeInfo {
+  padding: 30rpx;
+  border-top: 1px solid #f4f4f4;
+}
+
+.contentTitle {
+  margin-bottom: 20rpx;
+}
+
+.specsBox {
+  margin-right: 14rpx;
+  margin-bottom: 20rpx;
+}
+
+.guigetext {
+  display: inline-block;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #1e1e1e;
+  text-align: left;
+  line-height: 54rpx;
+  height: 54rpx;
+  padding: 0 20rpx;
+  background: #f0f0f0;
+}
+
+.selectguigetext {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 24rpx;
+  color: #f24e43;
+  text-align: left;
+  line-height: 54rpx;
+  height: 54rpx;
+  padding: 0 20rpx;
+  background: #fff9f9;
+  border: 1px solid #f24e43;
+}
+
+.selectguigetextno {
+  margin-right: 14rpx;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 24rpx;
+  color: #979797;
+  text-align: left;
+  line-height: 54rpx;
+  height: 54rpx;
+  padding: 0 20rpx;
+  background: #f0f0f0;
+}
+.spanText {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.countValue {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 6rpx;
+  height: 30px;
+  width: 50px;
+  line-height: 30px;
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.sunbmitButton {
+  margin: 70rpx auto;
+  height: 90rpx;
+  width: 690rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background: #f24e43;
+  border-radius: 45rpx;
+}
+.greysunbmitButton {
+  margin: 70rpx auto;
+  height: 90rpx;
+  width: 690rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background: #b4b2b1;
+  border-radius: 45rpx;
+}
+.closeIcon {
+  height: 60rpx;
+  width: 60rpx;
+  position: absolute;
+  right: 2rpx;
+  top: -26rpx;
+}
+
+.goodsName {
+  margin: 33rpx 30rpx;
+}
+
+.openSpctIcon {
+  height: 22rpx;
+  width: 11rpx;
+  margin-top: 38rpx;
+}
+
+.detailInfo {
+  margin: 0 30rpx;
+  border-top: 1px solid #f4f4f4;
+  line-height: 78rpx;
+}
+
+.goodsDetail {
+  border-top: 10rpx solid #fafafa;
+  width: 690rpx;
+  margin: 0 auto;
+}
+
+.detailTilte {
+  padding: 40rpx 0rpx 54rpx;
+  border-bottom: 1rpx solid #fafafa;
+}
+
+.popContent {
+  overflow: auto;
+  max-height: 460rpx;
+}
+
+.zhezhao {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.bottomBox {
+  position: fixed;
+  bottom: 30rpx;
+  height: 110rpx;
+  width: 725rpx;
+  left: 12rpx;
+  background: #fff2f2;
+}
+
+.bottomLeft {
+  margin: 40rpx 20rpx 0;
+}
+
+@keyframes myfirst {
+  from {
+    transform: translateY(933rpx);
+  }
+
+  to {
+    transform: translateY(0rpx);
+  }
+}
+
+/* @keyframes mylast {
+  from {
+    transform: translateY(0rpx);
+  }
+
+  to {
+    transform: translateY(-933rpx);
+  }
+} */
+
+.closePop {
+  animation: mylast;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width: 750rpx;
+  height: 860rpx;
+  border: 2rpx solid #ededed;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1454;
+  background-color: #fff;
+}
+
+.openPop {
+  animation: myfirst;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width: 750rpx;
+  height: 860rpx;
+  border: 2rpx solid #ededed;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1454;
+  background-color: #fff;
+}
+
+.guigeBox {
+  height: 900rpx;
+  width: 750rpx;
+  background: #fff;
+  border-radius: 15rpx 15rpx 0 0;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 30rpx;
+}
+.imgMarkPrice{
+  height: 36rpx;
+  width: 83rpx;
+  position: absolute;
+  top: -29rpx;
+  left: 83rpx;
+}
+.positionText{
+  position: absolute;
+   top: -25rpx;
+   left: 68rpx;
+}
+.lineThrough{
+  text-decoration: line-through;
+}

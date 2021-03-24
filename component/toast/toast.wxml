@@ -1,0 +1,6 @@
+<view class='wx-toast-box' animation="{{animationData}}" wx:if="{{showBox}}">
+  <view class='wx-toast-content'>
+    <!-- <view class='wx-toast-toast'>{{ content }}</view> -->
+    <rich-text class='wx-toast-toast' nodes="{{content}}"></rich-text>
+  </view>
+</view>

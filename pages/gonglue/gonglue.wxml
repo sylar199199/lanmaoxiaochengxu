@@ -1,0 +1,72 @@
+<view class='panel base-padding base-margin-bottom cate-data'>
+   <view class='authorize xieyiauthorize' wx:if='{{showxieyi}}'>
+        <view class='xieyiContent' style='top: {{xieyitop}}px'>
+        <image class='colseCode' bindtap="closeXieyi" src='https://oss.ifxj.com/lanmao/health/colseCode.png'> </image>
+        <view class='colorBlack contentBox'>
+            <rich-text class='description' nodes="{{content}}"></rich-text>
+        </view>
+        </view>
+    </view>
+  <view class='panel-body'>
+    <block>
+     
+     <view class='itemList'>
+       <view class="font32">枸杞攻略</view>
+      <view class='rowList'>
+        <view class='row'>
+            <view class='font28 colorBlack contentBox1'>
+                  <rich-text class='description' nodes="{{glcontent}}"></rich-text>
+              </view>
+        </view>
+      </view>
+  </view>
+      <!-- <view class='itemList'>
+        健康生活打卡
+        <view class='rowList'>
+          <view class='row'>
+            <view class='text-muted info'>上午(6:00-11:59:59)</view>
+            <view class='text-muted info'>下午(12:00-17:59:59)</view>
+            <view class='text-muted info'>晚上(18:00-24:00)</view>
+            <view class='text-muted info'>三个时间段，可分别最多收取6个能量球，每个能量球100
+              <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+            </view>
+            <view class='text-muted info'>每人每天打卡收集上限1800
+              <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+            </view>
+          </view>
+      </view>
+  </view>
+  <view class='itemList'>
+    更多任务
+    <view class='rowList'>
+      <view class='row'>
+        <view class='text-muted info'>新人见面礼获得500
+          <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+        </view>
+        <view class='text-muted info'>每邀请1位好友参与健康生活打卡可获得600
+          <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>,每日上限15人
+        </view>
+        <view class='text-muted info'>邀请好友加入，每天可获得TA打卡所获枸杞10%的奖励</view>
+         <view class='text-muted info'>发布一条社区动态可获得200
+          <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>,每日上限600<image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+        </view>
+        <view class='text-muted info'>点赞一条社区动态可获得10
+          <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>,每日上限200<image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <view class='itemList'>
+  <view class="font32">  社区规范</view>
+  
+    <view class='rowList'>
+      <view class='row'>
+        <view class='text-muted info'>
+          <text class='yinsi' bindtap='yinsi'>《社区规范》</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  </block>
+</view>
+</view>

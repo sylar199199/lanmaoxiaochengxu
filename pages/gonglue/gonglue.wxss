@@ -1,0 +1,152 @@
+.panel-body{
+  background: #fafafa;
+  padding-bottom: 40rpx;
+  height: 100vh;
+}
+.gouqicountIcon{
+  height: 31rpx;
+  width: 20rpx;
+  margin-right: 10rpx;
+}
+.itemList{
+  padding: 20rpx 48rpx;
+}
+.rowList{
+  border-radius: 15rpx;
+  box-shadow: 0px 3rpx 18rpx 0rpx rgba(3,0,0,0.1);
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  background: #fff; 
+}
+.itemIcon{
+  height: 46rpx;
+  width: 46rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30rpx;
+}
+.water{
+  height: 50rpx;
+  width: 38rpx;
+}
+.muyulu{
+  height: 62rpx;
+  width: 34rpx;
+}
+.text-muted{
+  vertical-align: middle;
+  line-height: 66rpx;
+}
+.gouqiIcon{
+  height: 22rpx;
+  width: 15rpx;
+  display: inline-block;
+  margin:0 4rpx;
+}
+.marginLeft{
+  margin-left: 76rpx;
+}
+.row{
+  border-bottom: 1rpx solid #dcdcdc;
+  padding: 24rpx;
+  line-height: 46rpx;
+  font-size: 28rpx;
+}
+.rightBox{
+  height: 55rpx;
+  min-width: 145rpx;
+  background: -webkit-linear-gradient(0deg, #fdf187, #fbbac6);
+  border-radius: 28rpx;
+  border: 1px solid #fff;
+  text-align: center;
+  
+}
+.borederBox{
+    color: #f24e43;
+    width: 141rpx;
+    height: 51rpx; 
+    background-color: #fff;
+    border-radius: 24rpx; 
+    margin: 2rpx auto;
+    line-height: 51rpx;
+}
+.rightBoxgrey{
+  height: 55rpx;
+  min-width: 129rpx;
+  border-radius: 28rpx;
+  border: 1px solid #8D8D8A;
+  text-align: center;
+  color: #8D8D8A;
+  padding: 0 8rpx;
+  line-height: 55rpx;
+}
+.loading{  
+  padding: 10rpx;  
+  font-size: 26rpx;
+  color:#666;
+  text-align: center;  
+}
+.rowList .row:nth-last-child(1){
+  border: none;
+}
+.authorize{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+}
+.xieyi{
+  margin-top: 60rpx;
+  line-height: 40rpx;
+  }
+  .rich-p{
+    line-height: 38rpx;
+  }
+  .description{
+    line-height: 24rpx;
+  }
+  .contentBox{
+    overflow-y: auto;
+    height: 410px;
+    padding: 0 20rpx;
+  }
+  .contentBox1{
+    min-height: 410px;
+    padding: 0 20rpx;
+  }
+  .yinsi{
+    color: #000;
+    text-decoration: underline;
+   }
+.colseCode{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+.xieyiauthorize{
+   z-index: 1001;
+}
+.authorizeContent{
+  padding: 50rpx 20rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  position: absolute;
+  width: 550rpx;
+  height: 550rpx;
+  left: 50%;
+  margin-left: -305rpx;
+}
+.xieyiContent{
+  padding: 50rpx 30rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  position: absolute;
+  width: 600rpx;
+  height: 420px;
+  left: 50%;
+  margin-left: -330rpx;
+}

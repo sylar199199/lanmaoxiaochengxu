@@ -1,0 +1,5 @@
+<!--components/navbar/index.wxml-->
+<view class="navbar  flex alignCenter" bindtap="goCommunity">
+      <image class='headIcon'  src='https://oss.ifxj.com/lanmao/health/backhome.png'></image>
+      <text class="font28 colorfff">首页</text>
+</view>

@@ -1,0 +1,10 @@
+var subday = function (timestamp) {
+  var getSeconds = '', getMinutes = '', getHours = '';
+  var d = getDate(timestamp);
+  getHours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
+  getMinutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
+  getSeconds = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds();
+  var newTime = (d.getMonth() + 1) + '-' + d.getDate();
+  return newTime
+}
+module.exports.subday = subday;

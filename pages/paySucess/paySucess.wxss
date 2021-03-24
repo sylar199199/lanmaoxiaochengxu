@@ -1,0 +1,28 @@
+/* pages/paySucess/paySucess.wxss */
+.paySucess{
+  border-top: 20rpx solid #fcfcfc;
+  text-align: center;
+}
+.payIcon{
+  height: 256rpx;
+  width: 330rpx;
+  margin: 150rpx auto 0rpx;
+}
+.parButton{
+  height: 90rpx;
+  width: 273rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  background: #f24e43;
+  margin: 60rpx auto;
+}
+.goHome{
+  height: 90rpx;
+  width: 273rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  border: 1px solid #bbb;
+  margin: 60rpx auto;
+}

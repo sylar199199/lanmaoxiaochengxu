@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Authorizephone": "/component/authorizephone/authorizephone",
+    "authorize": "/component/authorize/authorize"
+    
+  },
+  "navigationBarTitleText": "盲盒"
+}

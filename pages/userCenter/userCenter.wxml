@@ -1,0 +1,104 @@
+<view class="contentBox">
+<view class='authorize' wx:if='{{showAuthorize}}'>
+        <view class='authorizeContent' style='margin-top: -440rpx;top: 50%;'>
+            <image class='bacImg' src='https://oss.ifxj.com/lanmao/health/openGif0219.gif'></image>
+            <button class='authorizeButton' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                <image class='shouquanButton' src='https://oss.ifxj.com/lanmao/health/getinfobutton.png'></image>
+            </button>
+            <view class='cancleBox'>
+                <navigator open-type="exit" target="miniProgram">
+                <image class='colseCode' src='https://oss.ifxj.com/lanmao/health/closeShouquan.png'>
+                </image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+  <usercenterNavbar></usercenterNavbar>
+   <scroll-view scroll-y="true" style="height:100vh;" bindscrolltolower="onReachBottom" bindscroll="onPageScroll">
+      <view class="userInfo flex">
+        <image class="headimgurl"  src="{{userData.headimgurl}}"></image>
+        <view class='infoDetail'>
+            <view class='countBox flexBetween'>
+                <view class="centerBox"  bindtap="followlist">
+                    <view class="marginbottm  fontweight colorBlack font34">{{userData.followCount}}</view>
+                    <view class="font22 color41">关注</view>
+                </view>
+                <view class="centerBox" bindtap="gofanlist">
+                    <view class="marginbottm  fontweight colorBlack font34">{{fansCount}}</view>
+                    <view class="font22 color41">粉丝</view>
+                </view>
+                <view class="centerBox">
+                    <view class="marginbottm  fontweight colorBlack font34">{{userData.likeCount}}</view>
+                    <view class="font22 color41">获赞</view>
+                </view>
+            </view>
+            <view class='flexBetween' style="align-items: center;">
+              <view>
+                 <image class='sexIcon' wx:if="{{userData.sex == 1}}"  src='https://oss.ifxj.com/lanmao/health/man.png'></image>
+                <image class='sexIcon' wx:if="{{userData.sex == 2}}" src='https://oss.ifxj.com/lanmao/health/women.png'></image>
+                <text class="line" wx:if="{{userData.sex != 0 || userData.country || userData.city}}" >|</text>
+                <text class='font22 color999 idText'>{{userData.country}}{{userData.city}}</text>
+              </view>
+                <view class='careButton font24 flex alignCenter ' wx:if="{{!iscare}}" bindtap='care'><image class="addText" src="{{addIcon}}">+</image>
+                    <view>关注</view></view>
+                <view class='careButton font24' wx:if="{{iscare}}" bindtap='cancleCare'>已关注</view>
+            </view>
+        </view>
+    </view>
+    <view class="{{fixedNav?'tabNavfixed tabNav':'tabNav tabNavab'}}" id="index-nav" style="top:{{top}}px" >
+            <view class="tabBox " style='height:{{navHeight}}px;'>
+                <view class='flexbox'>
+                <view  style='display: inline-block;' wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur fontWeight' : 'fontWeight'}}"><text class="font26">{{item}}</text></view>
+                </view>
+            </view>
+    </view>
+  <view class='dongtai'  wx:if='{{hasData && showdata}}'>
+    <!-- <view class="communityCount font24">所有动态 <text class="counttext">{{count}}</text></view> -->
+     <view  style="width:100%" class="content">
+        <view class="img_item leftItem">
+          <view class='imgBox' wx:for="{{col1}}" wx:key="id"  data-id="{{item.id}}" bindtap="goDetail">
+            <image src="{{item.imgUrl}}"  class="imgUrl"mode="widthFix"></image>
+            <view class='title font24 colorBlack'>{{item.title}}</view>
+            <view class='nickNameBox flexBetween'>
+              <view class="leftBox">
+                <image class='nickUrl' src="{{item.userHeadimgurl}}"></image>
+                <text class="nickName colorGrey font24">{{item.userNickname}}</text>
+              </view>
+              <view class="rightBox" data-direct="col1" data-id='{{item.id}}' data-index="{{index}}" data-liked="{{item.liked}}" catchtap='cancleLike'>
+               <image class='nolikeicon'   wx:if="{{item.liked}}" src="{{likeicon}}" ></image>
+                <image class='nolikeicon' wx:if="{{!item.liked}}" src="{{nolikegrey}}"></image>
+                <text class="{{item.liked?'nickName colorBlack font22':'nickName colorGrey font22'}}">{{item.likeCount}}</text>
+              </view>
+            </view> 
+          </view>
+        </view>
+        <view class="img_item rightItem">
+          <view class='imgBox' wx:for="{{col2}}" wx:key="id"   data-id="{{item.id}}" bindtap="goDetail">
+            <image src="{{item.imgUrl}}" class="imgUrl" mode="widthFix"></image>
+            <view class='title font24 colorBlack'>{{item.title}}</view>
+            <view class='nickNameBox flexBetween'>
+              <view class="leftBox">
+                <image class='nickUrl' src="{{item.userHeadimgurl}}"></image>
+                <text class="nickName colorGrey font24">{{item.userNickname}}</text>
+              </view>
+              <view class="rightBox" data-direct="col2" data-id='{{item.id}}' data-index="{{index}}" data-liked="{{item.liked}}" catchtap='cancleLike'>
+                <image class='nolikeicon'   wx:if="{{item.liked}}" src="{{likeicon}}" ></image>
+                <image class='nolikeicon' wx:if="{{!item.liked}}" src="{{nolikegrey}}"></image>
+                <text class="{{item.liked?'nickName colorBlack font22':'nickName colorGrey font22'}}">{{item.likeCount}}</text>
+                
+              </view>
+            </view> 
+          </view>
+        </view>
+      </view>
+   
+  </view>
+  <view wx:if='{{hasData && showdata}}' class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+  <view wx:if='{{hasData && showdata}}' class="loading" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+  <view class='noDataBox' wx:if='{{!hasData && showdata}}'>
+      <image class='nodataImg' src='{{nocontent}}'></image>
+      <view class='nodataText font26 colorGrey'>暂无数据</view>
+  </view>
+   </scroll-view>
+  
+</view>

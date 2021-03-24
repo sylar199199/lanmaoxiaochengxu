@@ -1,0 +1,147 @@
+/* pages/confirmOrder/confirmOrder.wxss */
+
+.confirmOrder {
+  height: 100vh;
+  background: #FAFAFA;
+  padding-top: 20rpx;
+}
+
+.goodsBox {
+  margin: 20rpx 30rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  padding: 20rpx;
+}
+.adressBox {
+  margin-top: 0;
+}
+.remarkInput{
+  width: 100%;
+  font-size: 28rpx;
+}
+.gouqiBox {
+  height: 100rpx;
+  background: #fff;
+  line-height: 100rpx;
+}
+
+.moneyBox {
+  height: 140rpx;
+  background: #fff;
+  line-height: 140rpx;
+}
+
+.margintop {
+  margin-top: 20rpx;
+}
+
+.goodsInfo {
+  padding: 38rpx 0rpx 0;
+  line-height: 40rpx;
+}
+.paddingbottom {
+  padding-bottom: 38rpx;
+}
+
+.goodsImg {
+  height: 183rpx;
+  width: 183rpx;
+  margin-right: 24rpx;
+}
+
+.marginleft {
+  margin-left: 24rpx;
+}
+
+.info {
+  position: relative;
+  flex: 1;
+}
+
+.specsName {
+  position: absolute;
+  bottom: 0;
+}
+
+.gouqiIcon {
+  width: 16rpx;
+  height: 24rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.wxIcon {
+  width: 44rpx;
+  height: 40rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.selectIcon {
+  width: 44rpx;
+  height: 44rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.payButton {
+  margin: 44rpx auto;
+  line-height: 90rpx;
+  height: 90rpx;
+  width: 690rpx;
+  background: #e15a4c;
+  border-radius: 45rpx;
+  text-align: center;
+}
+
+.noData {
+  line-height: 160rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.addAdressIcon {
+  height: 43rpx;
+  width: 37rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.adressInfo {
+  line-height: 38rpx;
+  margin-top: 16rpx;
+}
+
+.adressInfocontact {
+  margin-right: 36rpx;
+}
+
+.detailAddress {
+  max-width: 520rpx;
+  line-height: 40rpx;
+}
+.goodsimgInfo{
+  max-width: 520rpx;
+  width: 520rpx;
+}
+.rightIcon {
+  position: relative;
+}
+
+.rightImg {
+  height: 22rpx;
+  width: 11rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -10rpx;
+}
+.defaultBox{
+  display: inline-block;
+  height: 34rpx;
+  width: 80rpx;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 34rpx;
+  margin-left: 16rpx;
+}

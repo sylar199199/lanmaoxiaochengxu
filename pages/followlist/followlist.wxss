@@ -1,0 +1,95 @@
+/* pages/pointsList/pointsList.wxss *//* pages/enhancedLoading/enhancedLoading.wxss */
+/* 注意如果不置 page 会造成跳转无效，另外，如果页面中存在有元素使用 z-index 时，page需要设置 position : relative; 才能响应*/
+page{
+    height:100%;
+    background: #FAFAFA;
+  }
+  .loading{  
+    padding: 10rpx;  
+    font-size: 26rpx;
+    color:#666;
+    text-align: center;  
+  }
+
+  .margintop {
+    margin-top: 20rpx;
+  }
+  
+  .paddingbottom {
+    padding-bottom: 20rpx;
+  }
+  
+  .marginleft {
+    margin-left: 24rpx;
+  }
+  .container {
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-bottom: 100rpx;
+    background: #fff;
+  }
+  .itemList{
+      margin: 0 30rpx;
+      padding: 35rpx 0;
+      border-bottom: 1px solid #f5f6fa;
+  }
+  .iconUrl{
+      height:  90rpx;
+      width: 90rpx;
+      border-radius: 50%;
+      margin-right: 24rpx;
+  }
+  .nickname{
+      margin-bottom: 16rpx;
+  }
+  .careNickname{
+    line-height: 90rpx;
+    
+  }
+  .recList{
+    border-bottom: 20rpx solid #f5f6fa;
+  }
+  .infoRight{
+    height: 55rpx;
+    min-width: 120rpx;
+    background: -webkit-linear-gradient(0deg, #fdf187, #fbbac6);
+    border-radius: 28rpx;
+    border: 1px solid #fff;
+    text-align: center;
+    margin-top: 20rpx;
+    padding: 0 2rpx;
+  }
+  .careright{
+    height: 55rpx;
+    min-width: 120rpx;
+    border-radius: 28rpx;
+    border: 1px solid #adadad;
+    text-align: center;
+    margin-top: 20rpx;
+    padding: 0 2rpx;
+  }
+  .borederBox{
+    color: #f24e43;
+    min-width: 120rpx;
+    height: 51rpx; 
+    background-color: #fff;
+    border-radius: 24rpx; 
+    margin: 2rpx auto;
+    line-height: 51rpx;
+    padding: 0 2rpx;
+}
+.borderGrey{
+    color: #adadad;
+    min-width: 120rpx;
+    height: 51rpx; 
+    background-color: #fff;
+    border-radius: 24rpx; 
+    margin: 2rpx auto;
+    line-height: 51rpx;
+    padding: 0 2rpx;
+}
+ 
+ 

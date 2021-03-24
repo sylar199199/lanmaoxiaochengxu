@@ -1,0 +1,134 @@
+/* pages/pointsList/pointsList.wxss *//* pages/enhancedLoading/enhancedLoading.wxss */
+/* 注意如果不置 page 会造成跳转无效，另外，如果页面中存在有元素使用 z-index 时，page需要设置 position : relative; 才能响应*/
+page{
+  height:100%
+}
+.panel-body{
+  padding-bottom:20px;
+}
+.pointsTop{
+  background:url('https://oss.ifxj.com/lanmao/health/pointsBac.png') no-repeat center center;
+  height: 348rpx;
+  width: 750rpx;
+  background-size: cover; 
+  position: relative;
+}
+.pointsText{
+  position: absolute;
+  top: 54rpx;
+  width: 100%;
+  text-align: center;
+}
+.headImg{
+  height: 117rpx;
+  width:117rpx;
+  border-radius: 50%;
+  margin-top: -58rpx;
+}
+.countBox{
+  border-radius: 10rpx 10rpx 0 0;
+  position: absolute;
+  top: 201rpx;
+  width: 710rpx;
+  height: 150rpx;
+  background: #fff;
+  left: 20rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+.gouqicountIcon{
+  height: 31rpx;
+  width: 20rpx;
+  margin-right: 10rpx;
+}
+.itemList{
+  padding: 0 48rpx;
+   margin-bottom: 30rpx;
+}
+.rowList{
+  border-radius: 15rpx;
+  box-shadow: 0px 1px 9px 1px rgba(3,0,0,0.1);
+  margin-top: 30rpx;
+  font-size: 28rpx;
+}
+.itemIcon{
+  height: 100rpx;
+  width: 100rpx;
+  display: inline-block;
+  vertical-align: middle;
+ 
+}
+.itemIcon1{
+  height: 40rpx;
+  width: 40rpx;
+  margin: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+ 
+}
+.water{
+  height: 50rpx;
+  width: 38rpx;
+}
+.muyulu{
+  height: 62rpx;
+  width: 34rpx;
+}
+.text-muted{
+  display: inline-block;
+  vertical-align: middle;
+}
+.text-mutedone{
+  margin-top: 16rpx;
+}
+.gouqiIcon{
+  height: 22rpx;
+  width: 15rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8rpx;
+}
+.row{
+  border-bottom: 1rpx solid #dcdcdc;
+  padding: 24rpx 20rpx;
+  line-height: 46rpx;
+}
+.rightBox{
+  height: 55rpx;
+  min-width: 120rpx;
+  background: -webkit-linear-gradient(0deg, #fdf187, #fbbac6);
+  border-radius: 28rpx;
+  border: 1px solid #fff;
+  text-align: center;
+  margin-top: 20rpx;
+  padding: 0 4rpx;
+}
+.borederBox{
+    color: #f24e43;
+    min-width: 120rpx;
+    height: 51rpx; 
+    background-color: #fff;
+    border-radius: 24rpx; 
+    margin: 2rpx auto;
+    line-height: 51rpx;
+    padding: 0 4rpx;
+}
+.rightBoxgrey{
+  height: 55rpx;
+  min-width: 120rpx;
+  border-radius: 28rpx;
+  border: 1px solid #8D8D8A;
+  text-align: center;
+  color: #8D8D8A;
+  line-height: 55rpx;
+  padding: 0 4rpx;
+}
+.loading{  
+  padding: 10rpx;  
+  font-size: 26rpx;
+  color:#666;
+  text-align: center;  
+}
+.rowList .row:nth-last-child(1){
+  border: none;
+}

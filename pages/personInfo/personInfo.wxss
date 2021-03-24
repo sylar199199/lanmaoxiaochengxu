@@ -1,0 +1,284 @@
+.userInfo {
+  margin: 30rpx 70rpx 30rpx 40rpx;
+}
+.headimgurl{
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 90rpx;
+}
+.marginbottm{
+  margin-bottom: 12rpx;
+}
+.countBox{
+  margin-bottom: 40rpx;
+}
+.line{
+  height: 20rpx;
+  width: 3rpx;
+  margin: 0 12rpx;
+  color: #e8e8e8;
+}
+.infoDetail{
+  width: 450rpx;
+}
+.contentTop{
+  position: relative;
+  z-index: 999;
+}
+.shareIcon{
+  height: 36rpx;
+  width: 36rpx;
+  margin-right: 20rpx;
+}
+.centerBox{
+  text-align: center;
+}
+.bigButton{
+  margin: 10rpx 26rpx 16rpx 26rpx;
+  width: 698rpx;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#f9e701;
+  border-radius: 36rpx;
+}
+.infoBox{
+  margin: 0 40rpx;
+}
+.idText{
+  margin-right: 20rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.sexIcon{
+  display: inline-block;
+  vertical-align: middle;
+  height: 36rpx;
+  width: 36rpx;
+}
+.ueserInfoone{
+  line-height: 64rpx;
+  padding: 20rpx 0 50rpx;
+}
+
+.wx-switch-input {
+  width: 42px !important;
+  height: 22px !important;
+}
+
+.wx-switch-input::before {
+  width: 40px !important;
+  height: 20px !important;
+}
+
+.wx-switch-input::after {
+  width: 18px !important;
+  height: 19px !important;
+}
+.color999{
+  color: #999;
+}
+.infoList{
+  padding: 46rpx 40rpx;
+  text-align: center;
+}
+.infoBox{
+  border-bottom: 1px solid #e0e0e0;
+}
+.listIcon{
+  height: 39rpx;
+  width: 39rpx;
+  margin-bottom: 20rpx;
+}
+.dizhiIcon{
+  height: 44rpx;
+  width: 37rpx;
+}
+.orderIcon{
+  height: 45rpx;
+  width: 45rpx
+}
+.flexbox{
+  /* margin-left: 28rpx; */
+  display: flex;
+  justify-content: center;
+
+}
+.communityCount{
+  margin: 30rpx 6rpx 10rpx;
+  background: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 200rpx;
+  text-align: center;
+  border-radius: 36rpx;
+}
+.communityCount1{
+  margin: 30rpx 6rpx 10rpx;
+  /* background: #fff; */
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 189rpx;
+  text-align: center;
+  border-radius: 25rpx;
+}
+.counttext{
+  margin-left: 12rpx;
+}
+.authorize1{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  z-index: 1000;
+}
+.authorizeContent1{
+  text-align: center;
+  border-radius: 20rpx;
+  background: #fff;
+  position: absolute;
+  width: 580rpx;
+  height: 900rpx;
+  left: 50%;
+  margin-left: -290rpx;
+}
+.jiantou{
+  height: 40rpx;
+  width: 70rpx;
+  margin-bottom: -10rpx;
+}
+.codeImg{
+  height: 350rpx;
+  width: 350rpx;
+  margin-top: 14rpx;
+  margin-bottom: 15rpx;
+}
+.logoText{
+  color: #000;
+  margin-top: -38rpx;
+}
+
+.colseCode{
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+
+.tabNavfixed{
+  position: fixed;
+  left:0; 
+}
+.tabNavab{
+  position: relative;
+}
+
+.tabNav{z-index: 4; width:100%;  background: #fff; display: flex;border-bottom:1px solid #f5f5f5; box-sizing: border-box; padding-top: 22rpx;}
+.tabNav> view:last-child{ margin-right: 0;}
+.tabNav> view text{margin:0 50rpx;display:inline-block;color: #666;position: relative;}
+.tabNav .cur text{  color:#000;padding-bottom: 25rpx;font-weight:600;font-size: 28rpx;}
+.tabNav .cur text::after { 
+  position: absolute;
+  content: '';
+  background: #ed5548;
+  height: 6rpx;
+  width: 58rpx;
+  bottom: 0;
+  left: 0;
+  border-radius: 5rpx;
+}
+.tabNav .tabBox{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+width: 100%;
+}
+.tabText{
+display: inline-block;
+}
+.dongtai{
+ background: #f6f6f6;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background: #f6f6f6;
+}
+
+.img_item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20rpx 10rpx 20rpx 15rpx;
+    width: 350rpx;
+}
+.imgBox{
+  width: calc(100%/2);
+  width: 350rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  margin-right: 10rpx;
+}
+
+.imgUrl{
+  max-height: 480rpx;
+  max-width: 350rpx;
+  border-radius: 10rpx 10rpx 0 0;
+}
+.rightItem{
+  margin-left: 10rpx;
+  margin-right: 15rpx;
+}
+.nickUrl{
+  height: 46rpx;
+  width: 46rpx;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12rpx;
+}
+.nolikeicon,.likeicon{
+  height: 27rpx;
+  width: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12rpx;
+}
+.title{
+  margin: 12rpx 15rpx;
+  font-weight:600;
+}
+.nickNameBox{
+  margin: 0 15rpx;
+}
+.nickNameBox{
+  margin: 0 15rpx;
+}
+.nickName{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* .tabNav{} */
+.tabNavfixed{
+  position: fixed;
+  left:0; 
+}
+.tabNavab{
+  position: relative;
+}
+.loading{
+  text-align: center;
+  color: #999;
+  font-size: 22rpx;
+  padding-bottom: 10rpx;
+  background:#f6f6f6;
+}

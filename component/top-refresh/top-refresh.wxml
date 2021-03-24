@@ -1,0 +1,6 @@
+
+<block wx:if="{{toprefresh}}">
+  <view style="height:0px;text-align: center;" animation="{{animation}}">
+    <image style="width:100rpx;height:60rpx;" src='https://oss.ifxj.com/lanmao/health/fresh.gif'></image>
+  </view>
+</block>

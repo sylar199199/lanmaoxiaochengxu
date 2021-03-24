@@ -1,0 +1,63 @@
+<view class='activiList'>
+
+    <authorize showAuthorize="{{showAuthorize}}" source='{{source}}' bind:myevent="onevent"></authorize>
+    <Authorizephone showAuthorizephone="{{showAuthorizephone}}"  code="{{code}}" bind:phonevent="phonevent"></Authorizephone>
+  <view wx:if="{{showData}}">
+    <view class='productList' wx:for="{{productList}}" wx:key="{{item}}" wx:if="{{item.goods.length != 0 && item.isShow }}">
+      <view class='titleBox colorBlack font36 fontweight'>
+        {{item.name}}
+      </view>
+      <view class='titleBox colorBlack font24'>
+        <text class='font26 colorGrey' style='margin-right: 12rpx;'>距活动结束</text>
+        <text class='borderTime'>{{item.day}}</text>
+        <text class='timeText'>天</text>
+        <text class='borderTime'>{{item.hour}}</text>
+        <text class='timeText'>:</text>
+        <text class='borderTime'>{{item.minute}}</text>
+        <text class='timeText'>:</text>
+        <text class='borderTime'>{{item.second}}</text>
+      </view>
+      <view class='productBox flex'>
+        <view class='productInfoBox' wx:for="{{item.goods}}" wx:key="{{ite}}" wx:for-index="inde" wx:for-item="ite" data-goodsid="{{ite.id}}" data-activityid="{{item.id}}" bindtap='goDetail'>
+          <view class='productImg'>
+            <view class='dialogBox' wx:if="{{ite.stock == 0}}">
+              <image class='dialogImg' src='https://oss.ifxj.com/lanmao/health/yiqiangguang.png' ></image>
+            </view>
+            <view class='userRegDaysLimitbox' wx:if="{{item.maxRegDays != 0}}">新人专享</view>
+            <image class='imgUrl' src="{{ite.imgUrl}}"></image>
+            <view class='productName'>
+              <text class='font28 colorBlack name'>{{ite.name}}</text>
+              <text class='font24 colorGrey stockText positionText' wx:if="{{ite.stock == 0}}">已抢光</text>
+              <text class='font24 colorGrey stockText positionText' wx:if="{{ite.stock != 0 && ite.salesVolume}}">已抢{{ite.salesVolume}}件</text>
+              <text class='font24 colorGrey stockText positionText' wx:if="{{ite.stock != 0 && !ite.salesVolume}}">已抢0件</text>
+            </view>
+            <view class="percent font20">
+            <view class='percentText'>{{ite.percent}}</view>
+              <view class="percentNumber font24 colorGrey" wx:if="{{ite.salesVolume}}" style="width:{{ite.percent}};height: 18rpx;">
+              </view>
+            </view>
+            <view class="priceBox">
+                <image class='gouqiIcon' src="https://oss.ifxj.com/lanmao/health/gouqi.png"></image>
+                <text class='font26 colorBlack'>{{ite.points}}</text>
+                <text class='font24 colorBlack'>+</text>
+                <text class='font26 colorRed fontweight'>¥{{ite.price}}</text>
+            </view>
+            <view class="priceBox flexBetween">
+              <view class="priceNumber">
+                <view class='markPrice font24 colorGrey'>¥{{ite.marketPrice}}</view>
+              </view>
+              <view wx:if="{{ite.stock == 0}}" class="greybuybutton">已抢光</view>
+              <view wx:if="{{ite.stock != 0}}" class="buybutton">马上抢</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='noDataBox' wx:if='{{productList.length == 0}}'>
+        <image class='nodataImg' src='https://oss.ifxj.com/lanmao/health/noActivity.png'></image>
+        <view class='nodataText font26 colorBlack'>暂无活动</view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

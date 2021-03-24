@@ -1,0 +1,41 @@
+<view class='panel base-padding base-margin-bottom cate-data'>
+  <view class='panel-body'>  
+    <view class='pointsTop'>
+      <view class='pointsText font32 colorBlack'>我的枸杞</view>
+      <view class='countBox'>
+        <image class='headImg' src='{{headIcon}}'></image>
+        <view class='pointsCount'>
+          <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+          <text class='colorBlack font32'>{{accumPoints}}</text>
+        </view>
+      </view>
+    </view>
+    <block wx:if="{{contentlist.length != 0}}">
+      <view class='itemList' wx:for="{{contentlist}}" wx:for-item="item"  wx:key="{{item.time}}"  wx:for-index="index">
+       {{(item.time)}}
+       <view class='rowList'>
+          <view class='row flexBetween' wx:for="{{item.logs}}" wx:for-item="ite" wx:key="{{ite.id}}" wx:for-index="ind"> 
+            <view>
+                <image wx:if="{{ite.imgUrl}}"  class="{{ite.ruleId == 10 || ite.ruleId == 20 || ite.ruleId == 21 || ite.ruleId == 25 ||ite.ruleId == 26 || ite.ruleId == 27 || ite.ruleId == 32?'itemIcon1':'itemIcon'}}" src='{{ite.imgUrl}}'></image>
+                <view  class='text-muted info'>{{ite.reason}}</view>
+            </view>
+              <view class='rightBox' wx:if="{{ite.type == 1}}">
+                <view class='borederBox'  >
+                    <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+                    <text>+</text>
+                    <text>{{ite.points}}</text>
+                </view>
+              </view>
+              <view class='rightBoxgrey' wx:if="{{ite.type == 2}}">
+                    <image class='gouqiIcon' src='https://oss.ifxj.com/lanmao/health/greyGouqi.png'></image>
+                    <text>-</text>
+                    <text>{{ite.points}}</text>
+              </view> 
+          </view>
+        </view>
+    </view>
+    </block>
+  </view>
+  <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+  <view class="loading" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+</view>

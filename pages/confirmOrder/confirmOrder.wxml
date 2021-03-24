@@ -1,0 +1,76 @@
+<view class='confirmOrder'>
+  <view class='goodsBox adressBox' bindtap="goAdress" wx:if="{{hasAdress}}">
+    <view class='noData' wx:if="{{!selectAdress}}">
+      <image class='addAdressIcon' src='https://oss.ifxj.com/lanmao/health/addAdress.png'></image>
+      <text class='marginleft colorBlack font24'>请添加收货地址</text>
+    </view>
+    <view class='hasData flexBetween' wx:if="{{selectAdress}}">
+      <view>
+        <view class='colorBlack font26 fontweight detailAddress'>
+          {{selectAdress.province}}{{selectAdress.city}}{{selectAdress.district}}{{selectAdress.detailAddress}}
+        </view>
+        <view class='colorBlack font24 adressInfo'>
+          <text class='adressInfocontact'>{{selectAdress.contact}}</text>
+          <text class=''>{{tel}}</text>
+          <text class='defaultBox' wx:if="{{selectAdress.defaulted}}">默认</text>
+        </view>
+      </view>
+      <view class='rightIcon'>
+        <image class='rightImg' src='https://oss.ifxj.com/lanmao/health/SpctIcon.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='goodsBox margintop'>
+    <view class='goodsInfo flexBetween'>
+      <view class='flex goodsimgInfo'>
+        <image class='goodsImg' wx:if="{{imgUrl}}" src='{{imgUrl}} '></image>
+        <view class='info'>
+          <view class='font28 colorBlack'>{{name}}</view>
+          <view class='font24 colorBlack specsName'>{{specsName}}</view>
+        </view>
+      </view>
+      <view class='font24 colorGrey'>
+        <view class='colorBlack font26'>¥{{price}}</view>
+        <view class='colorGrey font26'>x{{quantity}}</view>
+      </view>
+    </view>
+    <view class='goodsInfo flexBetween'>
+      <view>
+        <text class='colorBlack font26'>配送方式</text>
+        <text class='colorGrey font24 marginleft'>快递</text>
+      </view>
+      <view class='colorBlack font26'>
+        免运费
+      </view>
+    </view>
+    <view class='goodsInfo flexBetween paddingbottom'>
+      <view>
+      </view>
+      <view class='colorBlack font26'>
+        <text class='colorBlack font26'>合计：</text>
+        <text class='colorRed fontweight font32'>¥{{price*quantity}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='goodsBox flexBetween gouqiBox'>
+    <view class='gouqi'>
+      <image class='gouqiIcon ' src='https://oss.ifxj.com/lanmao/health/gouqi.png'></image>
+      <text class='font28 colorBlack'>枸杞</text>
+    </view>
+    <view class='colorRed font32'>-{{gouqiCount}}</view>
+  </view>
+  <view class='goodsBox flexBetween moneyBox'>
+    <view class='gouqi'>
+      <image class='wxIcon' src='https://oss.ifxj.com/lanmao/health/wxIcon.png'></image>
+      <text class='font28 colorBlack'>微信支付</text>
+    </view>
+    <view>
+      <image class='selectIcon' src='https://oss.ifxj.com/lanmao/health/selectIcon.png'></image>
+    </view>
+  </view>
+  <view class='goodsBox flexBetween'>
+     <input class="remarkInput"  maxlength="200" bindinput="bindKeyInput"  placeholder="请填写订单备注（选填）不超过200字"/>
+  </view>
+  <view class='payButton font32 colorfff' wx:if="{{showorder}}" bindtap="creadOrder">立即支付</view>
+  <view class='payButton font32 colorfff' wx:if="{{!showorder}}">立即支付</view>
+</view>

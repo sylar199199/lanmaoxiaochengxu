@@ -1,0 +1,68 @@
+.page__bd{
+  height: 100vh;
+  background: #fcfcfc;
+}
+.section_gap{
+  padding-bottom: 120rpx;
+}
+.firstBox{
+ height: 20rpx;
+ width: 100%;
+}
+radio-group {
+display: inline-block;
+}
+.infoName{
+  padding-left: 80rpx;
+  padding-bottom: 36rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+.infoNamebottom{
+  padding-top: 30rpx;
+}
+.radioBox{
+    position:relative;
+    background: #fff;
+    box-shadow: 0 3rpx 18rpx 0 #f4f4f4;
+    padding: 40rpx 20rpx;
+    margin: 0rpx 30rpx 22rpx;
+    border-radius: 15rpx;
+}
+.contact{
+  margin-right: 30rpx;
+}
+.adress{
+  margin-top: 26rpx;
+}
+.radio{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -11rpx;
+}
+.deleteIcon{
+  height: 37rpx;
+  width: 35rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 50rpx;
+  margin-right: 6rpx;
+}
+.editorIcon{
+  height: 32rpx;
+  width: 34rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 18rpx;
+  margin-right: 6rpx;
+}
+.payButton{
+  position: fixed;
+  bottom: 50rpx;
+  left: 30rpx;
+  line-height: 90rpx;
+  height: 90rpx;
+  width: 690rpx;
+  background: #e15a4c;
+  border-radius: 45rpx;
+  text-align: center;
+}

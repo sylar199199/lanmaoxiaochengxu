@@ -1,0 +1,59 @@
+<!--pages/insurance/insurance.wxml-->
+<view class="insurance">
+    <view class="navbar  flex alignCenter" bindtap="_navBack">
+      <image class='headIcon'  src='https://oss.ifxj.com/lanmao/health/backhome.png'></image>
+      <text class="font28 colorfff">首页</text>
+    </view>
+    <view class='authorize' wx:if='{{showtk}}' bindtap="closetk">
+        <view class='authorizeContent' style='top: {{top}}px'>
+            <image class="phoneurl" src='https://oss.ifxj.com/lanmao/health/insurancetk.png'></image>
+            <view class="tkTextone">领取成功</view>
+            <view class="flexalignCenter codeBox">
+                <image class='colseCode' data-src='{{klcode}}'   src='{{klcode}}'></image>
+                <text class="font24">昆仑健康保险</text>
+            </view>
+            <view class="tkTexttwo" catchtap='gogzh'>关注公众号查看保单详情</view>
+        </view>
+    </view>
+    <image class="insuranceimg"  src="{{backinsurance}}"></image>
+    <image class="insuranclogo" style="margin-top:{{navTop+4}}px;"  src="{{insuranclogo}}"></image>
+    <image class="insuranceInfo"   style="margin-top:{{navTop+4}}px;" src="{{insuranceInfo}}"></image>
+    <image class="insurancetext1"  style="margin-top:{{navTop+4}}px;" src="{{insurancetext1}}"></image>
+    <image class="insurancetext"   style="margin-top:{{navTop+4}}px;" src="{{insurancetext}}"></image>
+    <image class="insurancehc"   style="margin-top:{{navTop+4}}px;" src="{{insurancehc}}"></image>
+    <view class="infoBox" style="margin-top:{{navTop+4}}px;">
+       <image class="insurancetitle"    src="{{insurancetitle}}"></image>
+       <view class="inputBox flexalignCenter margintop60">
+           <text class="textLable">手机号:</text>
+           <text class="weui-input" >{{phone}}</text>
+            <!-- <input type="tel" class="weui-input"  placeholder-style="color:#999" maxlength="11" placeholder="请输入手机号" /> -->
+       </view>
+        <view class="inputBox flexalignCenter">
+           <text class="textLable">姓名:</text>
+            <input type="text" class="weui-input" disabled="true" value="{{name}}" bindblur='usernameInput' placeholder-style="color:#999"  placeholder="请拍照上传身份证识别" />
+            <image class="insurancePhonto" bindtap="takePhoto" src="{{insurancePhonto}}"></image>
+       </view>
+        <view class="inputBox flexalignCenter marginbottom40">
+            <text class="textLable">身份证:</text>
+            <input class="weui-input" placeholder-style="color:#999" disabled="true" bindblur='useridNumInput' value="{{idNum}}"  placeholder="请拍照上传身份证识别" />
+            <image class="insurancePhonto" bindtap="takePhoto" src="{{insurancePhonto}}"></image>
+       </view>
+       <view class="warmText">
+           1.  赠险领取年龄为18岁-60周岁。 
+        </view>
+        <view class="warmText">
+            2. 每人仅限领取一份，只能给本人领取。
+        </view>
+        <view class="warmText">
+            3. 您的赠险将由昆仑健康保险股份有限公司承保，具体承保结果以电子保单为准，保单下载链接将以短信形式发送至您的手机。
+        </view>
+        <view class="selectBox flex">
+            <image  wx:if="{{isSelect}}" bindtap="changeSelect" class="selectIcon" src="{{insuranceNoselect}}"></image>
+            <image  wx:if="{{!isSelect}}" bindtap="changeSelect" class="selectIcon" src="{{insuranceselect}}"></image>
+            <text class="selectText">本人已满18周岁，同意并授权"小兴趣"将领取人信息给到保险公司。</text>
+        </view>
+        <view class="smallButton" wx:if="{{showLight}}" bindtap="submit">确认领取</view>
+         <view class="smallButton greyButton" wx:if="{{!showLight}}">确认领取</view>
+    </view>
+    
+</view>

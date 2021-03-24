@@ -1,0 +1,29 @@
+<view class='panel base-padding base-margin-bottom cate-data'>
+  <view class='container' wx:if="{{showData}}">
+    <!-- 内容布局 -->
+     <block wx:if="{{hasData}}">
+      <view class='itemList flexBetween' wx:for="{{contentlist}}" wx:for-item="item" wx:key="{{item.time}}" wx:for-index="index">
+          <view class='infoLeft' bindtap="goCenter" data-id="{{item.id}}">
+            <view class='flex'>
+               <image class="iconUrl " src='{{item.headimgurl}}'></image>
+               <view class="careNickname">
+                  <view class="nickname font32 colorBlack">{{item.nickname}}</view>
+               </view>
+            </view>
+          </view>
+          <view class='infoRight' wx:if="{{!item.followed}}" data-id='{{item.id}}' data-content='contentlist' data-index="{{index}}" data-followed="{{item.followed}}" catchtap='care'>
+            <view class='borederBox font28'>关注</view>
+          </view>
+          <view class="careright" wx:if="{{item.followed}}" data-id='{{item.id}}' data-content='contentlist' data-index="{{index}}" data-followed="{{item.followed}}" catchtap='cancelcare'>
+            <view class=' borderGrey font28'>已关注</view>
+          </view>
+      </view>
+    </block>
+    <view class='noDataBox' wx:if="{{!hasData}}">
+      <image class='nodataImg' src='https://oss.ifxj.com/lanmao/health/noOrder.png'></image>
+      <view class='nodataText font26 colorGrey'>暂无粉丝</view>
+    </view>
+  </view>
+  <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+  <!-- <view class="loading" hidden="{{!searchLoadingComplete || contentlist.length == 0}}">已加载全部</view> -->
+</view>

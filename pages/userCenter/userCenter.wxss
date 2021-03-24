@@ -1,0 +1,167 @@
+/* pages/community/community.wxss */
+page{
+    width: 100%;
+    margin: 0;
+  }
+  .contentBox{
+    background: #f6f6f6;
+  }
+  .userInfo {
+    padding: 30rpx 70rpx 30rpx 40rpx;
+      border-bottom: 1px solid #f7f7f7;
+      background: #fff;
+  }
+  .communityCount{
+    margin: 30rpx 34rpx 10rpx;
+    background: #fff;
+    height: 50rpx;
+    line-height: 50rpx;
+    width: 189rpx;
+    text-align: center;
+    border-radius: 25rpx;
+  }
+  .counttext{
+    margin-left: 12rpx;
+  }
+  .headimgurl{
+      height: 140rpx;
+      width: 140rpx;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-right: 90rpx;
+  }
+  .sexIcon{
+    display: inline-block;
+    vertical-align: middle;
+    height: 36rpx;
+    width: 36rpx;
+  }
+  .marginbottm{
+      margin-bottom: 12rpx;
+  }
+  .countBox{
+      margin-bottom: 40rpx;
+  }
+  .line{
+      height: 20rpx;
+      width: 3rpx;
+      margin: 0 12rpx;
+      color: #e8e8e8;
+  }
+  .infoDetail{
+      width: 450rpx;
+  }
+  .contentTop{
+      position: relative;
+      z-index: 999;
+  }
+  .addText{
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: -2rpx;
+  }
+  .content{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background: #f6f6f6;
+  }
+  
+  .img_item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20rpx 10rpx 20rpx 15rpx;
+      width: 350rpx;
+  }
+  .imgBox{
+    width: calc(100%/2);
+    width: 350rpx;
+    background: #fff;
+    border-radius: 10rpx;
+    margin-bottom: 20rpx;
+    padding-bottom: 20rpx;
+    margin-right: 10rpx;
+  }
+  .imgUrl{
+    max-height: 480rpx;
+    max-width: 350rpx;
+    border-radius: 10rpx 10rpx 0 0;
+  }
+  .rightItem{
+    margin-left: 10rpx;
+    margin-right: 15rpx;
+  }
+  .pic{
+    border-radius: 10rpx;
+    width: 345rpx;
+  }
+  .nickUrl{
+    height: 46rpx;
+    width: 46rpx;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12rpx;
+  }
+  .nolikeicon,.likeicon{
+    height: 27rpx;
+    width: 30rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12rpx;
+  }
+  .title{
+    margin: 12rpx 15rpx;
+    font-weight:600;
+  }
+  .nickNameBox{
+    margin: 0 15rpx;
+  }
+  .nickName{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+/* .tabNav{} */
+.tabNavfixed{
+    position: fixed;
+    left:0; 
+}
+.tabNavab{
+    position: relative;
+}
+
+.tabNav{z-index: 4; width:100%;  background: #fff; display: flex;border-bottom:1px solid #f5f5f5; box-sizing: border-box;padding-top: 28rpx; }
+.tabNav> view:last-child{ margin-right: 0;}
+.tabNav> view text{margin:0 50rpx;display:inline-block;color: #666;}
+.tabNav .cur text{ border-bottom:5rpx solid #ed5548; color:#000;padding-bottom: 25rpx;}
+.tabNav .tabBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.dongtai{
+   background: #f6f6f6;
+}
+.centerBox{
+  text-align: center;
+}
+.loading{
+  text-align: center;
+  color: #999;
+  font-size: 22rpx;
+  padding-bottom: 10rpx;
+  background:#f6f6f6;
+}
+.careButton{
+  justify-content: center;
+  background: #f9e600;
+  height: 66rpx;
+  width:230rpx;
+  line-height: 66rpx;
+  text-align: center;
+  border-radius: 33rpx;
+}

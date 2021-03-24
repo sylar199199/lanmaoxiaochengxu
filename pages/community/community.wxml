@@ -1,0 +1,105 @@
+<view class="contentBox">
+  <Authorizephone showAuthorizephone="{{showAuthorizephone}}"  code="{{code}}" bind:phonevent="phonevent"></Authorizephone>
+  <authorize showAuthorize="{{showAuthorize}}" source='{{source}}' bind:myevent="onevent"></authorize>
+  <communitynavbar bindchangeTab="changeTab" tabIndex = "{{tabIndex}}" bindisbindPhone="isbindPhone" bindisregister='isregister'></communitynavbar>
+   <view class="activityBox" wx:if="{{tabIndex == 2}}">
+     <view class="posterBox" wx:for="{{posterData}}"  wx:if="{{item.isshowContent}}">
+       <image class="posterImg" src="{{item.imgUrl}}" data-url="{{item.tempImgUrl}}"data-id="{{item.id}}" bindtap="downloadImg">
+         <view class="backBox" wx:if="{{item.isshowTime}}"></view>
+         <view class="daojishi" wx:if="{{item.isshowTime}}" >
+            <text class="dayBox">{{item.d}}</text> 
+            <text class="spaceText">天</text>
+            <text class="dayBox">{{item.h}}</text> 
+            <text class="spaceText">:</text>
+            <text class="dayBox">{{item.m}}</text> 
+            <text class="spaceText">:</text>
+            <text class="dayBox">{{item.s}}</text> 
+         </view>
+         <image class="download" class="{{testtrue?'download':'download smalldownload'}}" src="{{downloadicon}}"></image>
+       </image>
+     </view>
+      <view class='noDataBox' wx:if='{{hideData}}'>
+        <image class='nodataImg' src='{{nocontent}}'></image>
+        <view class='nodataText font26 colorGrey'>暂无活动</view>
+    </view>
+   </view>
+  <scroll-view wx:if="{{tabIndex != 2}}" scroll-y style="height:100vh;margin-top: 80rpx;"  bindscrolltolower="onReachBottom"  bindtouchstart='touchStart' bindtouchend='touchEnd' bindtouchmove='touchMove'>
+    <view class="scrollBox" wx:if="{{tabIndex != 2}}">
+      <scroll-view class="coupon-scroll-view_x" scroll-x="true" scroll-with-animation="true" id="scroll-view" scroll-left="{{ scrollLeft }}">
+            <view bindtap="_evalutionItemClick" data-id="{{item.id}}" data-name="{{item.name}}" class="flow-items  {{ item.isSelected ? 'flow-items-selected':'' }}" wx:for="{{ topicData }}" wx:key="{{ item.id}}"   >
+                <view class="aligncenter">
+                  <image src="https://oss.ifxj.com/lanmao/health/lsback.png" class="back" wx:if="{{index%3 == 0}}"></image>
+                  <image src="https://oss.ifxj.com/lanmao/health/hsback.png" class="back" wx:if="{{index%3 == 1}}"></image>
+                  <image src="https://oss.ifxj.com/lanmao/health/csback.png" class="back" wx:if="{{index%3 == 2}}"></image>
+                  <text>{{ item.name }}</text>
+                </view>
+            </view>
+      </scroll-view>
+    </view>
+    <view wx:if="{{showRefresh}}" style='width:100%;position:relative;padding:40rpx 0;'>
+    <view class="text-gray font24 colorGrey" style='position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);'>
+      <view wx:if="{{freshStatus == 'fresh'}}" class="flex">
+        <view class="lzy-loading"></view>
+        <image style="width:448rpx;height:80rpx;" src='{{fresh}}'></image>
+      </view>
+      <view class="text" wx:elif="{{freshStatus == 'more'}}">
+        <!-- 使用到了 colorUI 下拉箭头图标 -->
+        <text class="cuIcon-refresharrow"></text> 继续下拉刷新
+      </view>
+      <view class="text" wx:else>
+       <image style="width:448rpx;height:80rpx;" src='{{fresh}}'></image>
+      </view>
+    </view>
+  </view>
+  <view class=''>
+  <!-- <view bindtap='deleteItem'>删除</view> -->
+      <view  style="width:100%" class="content" wx:if='{{hasData}}'>
+        <view class="img_item">
+          <view class='imgBox' wx:for="{{col1}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+            <view style=""></view>
+            <image src="{{item.imgUrl}}"  class="imgUrl" mode="widthFix"></image>
+            <view class='title font26 colorBlack'>{{item.title}}</view>
+            <view class='nickNameBox flexBetween'>
+              <view class="leftBox">
+                <image class='nickUrl' src="{{item.userHeadimgurl}}"></image>
+                <text class="nickName colorGrey font22">{{item.userNickname}}</text>
+              </view>
+              <view class="rightBox" data-direct="col1" data-id='{{item.id}}' data-index="{{index}}" data-liked="{{item.liked}}" catchtap='cancleLike'>
+                <image class='nolikeicon'   wx:if="{{item.liked}}" src="https://oss.ifxj.com/lanmao/health/like.png" ></image>
+                <image class='nolikeicon' wx:if="{{!item.liked}}" src="https://oss.ifxj.com/lanmao/health/lickgrey.png"></image>
+                <text class="{{item.liked?'nickName colorBlack font22':'nickName colorGrey font22'}}">{{item.likeCount}}</text>
+              </view>
+            </view> 
+          </view>
+        </view>
+        <view class="img_item rightItem">
+          <view class='imgBox' wx:for="{{col2}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+            <image src="{{item.imgUrl}}" class="imgUrl" mode="widthFix"></image>
+            <view class='title font26 colorBlack'>{{item.title}}</view>
+            <view class='nickNameBox flexBetween'>
+              <view class="leftBox">
+                <image class='nickUrl' src="{{item.userHeadimgurl}}"></image>
+                <text class="nickName colorGrey font22">{{item.userNickname}}</text>
+              </view>
+              <view class="rightBox" data-direct="col2" data-id='{{item.id}}' data-index="{{index}}" data-liked="{{item.liked}}" catchtap='cancleLike'>
+                <image class='nolikeicon'  wx:if="{{item.liked}}" src="https://oss.ifxj.com/lanmao/health/like.png" ></image>
+                <image class='nolikeicon'wx:if="{{!item.liked}}" src="https://oss.ifxj.com/lanmao/health/lickgrey.png" ></image>
+                <text class="{{item.liked?'nickName colorBlack font22':'nickName colorGrey font22'}}">{{item.likeCount}}</text>
+              </view>
+            </view> 
+          </view>
+        </view>
+      </view>
+   
+    <view class='publishBox'>
+      <image class='publishIcon' bindtap='goPublish' src='{{publishIcon}}'></image>
+    </view>
+  </view>
+  <view class='noDataBox' wx:if='{{!hasData && showdata}}'>
+      <image class='nodataImg' src='{{nocontent}}'></image>
+      <view class='nodataText font26 colorGrey'>暂无数据</view>
+  </view>
+  <view class="loading" wx:if='{{hasData && showdata}}' hidden="{{!searchLoading}}">正在载入更多...</view>  
+  <view class="loading" wx:if='{{hasData && showdata}}' hidden="{{!searchLoadingComplete}}">已加载全部</view>
+  </scroll-view>
+</view>

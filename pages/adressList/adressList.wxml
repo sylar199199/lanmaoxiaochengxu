@@ -1,0 +1,38 @@
+<view class="page__bd">
+  <view class='firstBox'></view>
+  <view class="section section_gap ">
+   
+      <view class='radioBox' wx:if='{{adressList.length != 0}}' wx:for-items="{{adressList}}" data-id='{{item.id}}' bindtap="selectAdress">
+        <view class='infoName'>
+          <view>
+            <text class='fontweight colorBlack font30 contact'>{{item.contact}}</text>
+            <text class='fontweight colorBlack font30'>{{item.tel}}</text>
+          </view>
+          <view class='adress font26'>
+            {{item.province}}{{item.city}}{{item.district}}{{item.detailAddress}}
+          </view>
+        </view>
+        <view class='infoNamebottom flexBetween'>
+          <view class='colorGrey font24' style="margin-top: 10rpx;" catchtap="catchtap">
+           <radio-group class="radio-group" bindchange="radioChange">
+           <radio class="radio" color="{{color}}" wx:key="id" value="{{item.id}}" checked="{{item.defaulted}}">
+        </radio>
+         </radio-group>
+            <text>默认收货地址</text>
+          </view>
+          <view>
+            <image class='editorIcon' data-id="{{item.id}}" catchtap="goeditorAdress" src='https://oss.ifxj.com/lanmao/health/editorIcon.png' ></image>
+            <text class='color666 font24' data-id="{{item.id}}" catchtap="goeditorAdress">编辑</text>
+            <image class='deleteIcon' data-id="{{item.id}}" src='https://oss.ifxj.com/lanmao/health/deleteIcon.png' catchtap="deleteAdress"></image>
+            <text class='color666 font24' data-id="{{item.id}}" catchtap="deleteAdress">删除</text>
+          </view>
+        </view>
+      </view>
+      <view class='noDataBox' wx:if='{{adressList.length == 0}}'>
+        <image class='nodataImg' src='https://oss.ifxj.com/lanmao/health/noAdress.png'></image>
+        <view class='nodataText font26 colorBlack'>暂无地址</view>
+      </view>
+   
+  </view>
+  <view class='payButton font32 colorfff' bindtap='goEditorAdress'>新增地址</view>
+</view>

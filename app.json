@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/insurance/insurance",
+    "pages/confirmOrder/confirmOrder",
+    "pages/orderList/orderList",
+    "pages/paySucess/paySucess",
+    "pages/ceyice/ceyice",
+    "pages/activitylist/activitylist",
+    "pages/releasedynamics/releasedynamics",
+    "pages/gonglue/gonglue",
+    "pages/community/community",
+    "pages/personInfo/personInfo",
+    "pages/poster/poster",
+    "pages/communityDetail/communityDetail",
+    "pages/userCenter/userCenter",
+    "pages/followlist/followlist",
+    "pages/fanlist/fanlist",
+    "pages/pointsList/pointsList",
+    "pages/adressList/adressList",
+    "pages/editorAdress/editorAdress",
+    "pages/productDetail/productDetail",
+    
+    
+    "pages/topicList/topicList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#6b6b6b",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/community/community",
+        "iconPath": "./pages/images/shequgrey.png",
+        "selectedIconPath": "./pages/images/shequ.png",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "./pages/images/dakagrey.png",
+        "selectedIconPath": "./pages/images/daka.png",
+        "text": "打卡"
+      },
+      {
+        "pagePath": "pages/activitylist/activitylist",
+        "iconPath": "./pages/images/manghegrey.png",
+        "selectedIconPath": "./pages/images/manghe.png",
+        "text": "兑盲盒"
+      },
+      {
+        "pagePath": "pages/personInfo/personInfo",
+        "iconPath": "./pages/images/wodegrey.png",
+        "selectedIconPath": "./pages/images/wode.png",
+        "text": "我"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  },
+  "sitemapLocation": "sitemap.json"
+}

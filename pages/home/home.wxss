@@ -1,0 +1,747 @@
+/* pages/tab/tab.wxss */
+.swiperImg {
+  width: 750rpx;
+  height: 887rpx;
+  position: absolute;
+}
+.view-page{
+  
+}
+.page-content{
+  position: relative;
+  height: 886rpx;
+}
+
+.textBoxone{
+  position: absolute;
+  left: 260rpx;
+  bottom: 24rpx;
+}
+.authorizecodeContent{
+  text-align: center;
+  border-radius: 20rpx;
+  background: #fff;
+  position: absolute;
+  width: 580rpx;
+  height: 900rpx;
+  left: 50%;
+  margin-left: -290rpx;
+}
+.authorize{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  z-index: 1002;
+}
+.authorizecode{
+  background: rgba(0,0,0,0.7);
+}
+.jiantou{
+  height: 40rpx;
+  width: 70rpx;
+  margin-bottom: -10rpx;
+}
+.codeImg{
+  height: 350rpx;
+  width: 350rpx;
+  margin-top: 14rpx;
+  margin-bottom: 15rpx;
+}
+.logoText{
+  color: #000;
+  margin-top: -38rpx;
+}
+.colseCode{
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+.authorizezhegai{
+   width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1004;
+  background: rgba(0,0,0,0.8);
+}
+/* .yindaoContent{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  position: relative;
+} */
+.authorizeyindao{
+  position: fixed;   
+  left: 350rpx;
+  top: 346rpx;
+  width: 125rpx;   
+  height: 125rpx;   
+  border-radius: 125rpx;   
+  box-shadow: rgba(0,0,0,.6) 0px 0px 0px 1000px;   
+  z-index: 1004; 
+}
+.yindaoone{
+  position: absolute;
+  width: 364rpx;
+  height: 348rpx;
+  left: 342rpx;
+  top: 202rpx;
+  z-index: 1005; 
+}
+.yindaothree{
+  position: absolute;
+  width: 238rpx;
+  height: 97rpx;
+  left: 256rpx;
+  top: 700rpx;
+  z-index: 1005; 
+}
+.yindaotwo{
+  position: absolute;
+  width: 277rpx;
+  height: 220rpx;
+  left: 210rpx;
+  bottom: 140rpx;
+  z-index: 1005; 
+}
+.homShow{
+  height: 100%;
+  width: 100%;
+}
+.bacImg{
+   width: 700rpx;
+  height: 795rpx;
+}
+.authorizeContent{
+  text-align: center;
+  position: absolute;
+  width: 700rpx;
+  height: 795rpx;
+  left: 50%;
+  margin-left: -350rpx;
+}
+.logoImg{
+  height: 100rpx;
+  width: 100rpx;
+  margin-top: 80rpx;
+  margin-bottom: 15rpx;
+  border-radius: 50%;
+}
+
+.cancleBox{
+  position: absolute;
+  margin-top: 20px;
+  left: 50%;
+  margin-left: -30rpx;
+}
+.colseCode{
+  height: 60rpx;
+  width: 60rpx;
+}
+.navigator-hover {
+  opacity: 1;
+
+}
+.logoText{
+  color: #000;
+}
+.authorizeText{
+  margin-top: 60rpx;
+}
+.shouquanButton{
+  width: 360rpx;
+   height: 95rpx;
+}
+.authorizeButton{
+  margin-top: 20rpx;
+  width: 410rpx;
+  color: #fff;
+  font-size: 26rpx;
+  height: 95rpx;
+  line-height: 95rpx;
+  left: 135rpx;
+  top: 660rpx;
+}
+.ipImg{
+  width: 300rpx;
+  height: 300rpx;
+  position: absolute;
+  left: 100rpx;
+  top: 245rpx;
+}
+.BigipImg{
+  width: 440rpx;
+  height: 440rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 140rpx;
+  }
+  .surround-box{
+    position: absolute;
+    height: 500rpx;
+    width:  500rpx;
+    margin: 230rpx auto;
+    border-radius: 50%;
+    left: 125rpx;
+  }
+    .circle{
+      position: absolute;
+      z-index: 999;
+    }
+    .circleText{
+      background: #fff;
+      color: #000;
+      height: 66rpx;
+      width: 66rpx;
+      font-size: 24rpx;
+      border-radius: 50%;
+      line-height: 34rpx;
+      text-align: center;
+    }
+    .circleText1{
+      top: 320rpx;
+      right: 0;
+    }
+    .imgStyle{
+      height: 120rpx;
+      width: 120rpx;
+    }
+    .circlecover .imgStyle{
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      /* -webkit-filter: blur(5rpx);
+      -moz-filter: blur(5rpx);
+      -o-filter: blur(5rpx);
+      -ms-filter: blur(5rpx);
+      filter: blur(2rpx); */
+    }
+    .circleLeft{
+      position: absolute;
+      left: 30rpx;
+      width: 68rpx;
+      bottom: 75rpx;
+    }
+    
+    .circleright{
+      position: absolute;
+      right: 32rpx;
+      width: 68rpx;
+      bottom: 75rpx;
+    }
+    .cursonBox{
+      height: 100rpx;
+      width: 87rpx;
+      margin-top: 50rpx;
+    }
+     .collectBox:nth-child(odd) .circle{
+      animation: heart 1.1s ease-in-out 2.2s infinite alternate;
+      -webkit-animation: heart 1.1s ease-in-out 2.2s infinite alternate;
+    }
+    .collectBox:nth-child(even) .circle{
+      animation: heart 1.1s ease-in-out 1.1s infinite alternate;
+      -webkit-animation: heart 1.1s ease-in-out 1.1s infinite alternate;
+    }
+    .dojishiText{
+      position: absolute;
+      bottom: 0;
+      font-size: 22rpx;
+      top: 92rpx;
+      right: 11rpx;
+      background: rgba(0,0,0,0.4);
+      border-radius: 20rpx;
+      display: inline-block;
+      height: 40rpx;
+      width: 100rpx;
+      text-align: center;
+      line-height: 40rpx;
+      color: #fff;
+    }
+    .dojishiTextone{
+      right: 19rpx;
+    }
+  /* @keyframes heart{
+  from{margin-top:0px;}
+  to{margin-top:-12px;}
+  } */
+
+@keyframes heart{
+from{transform:translate(0,0)}
+to{transform:translate(0,12px)}
+}
+.timeBox{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 24rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+.timeText{
+  margin-right: 20rpx;
+  text-shadow: 0px 0px 10px #bbb;
+}
+.achiveIcon{
+  height: 38rpx;
+  width: 38rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4rpx;
+}
+.lightMilk{
+    height: 64rpx;
+    width: 64rpx;
+}
+.water{
+  height: 40rpx;
+  width: 30rpx;
+}
+.lightwater{
+  height: 53rpx;
+  width: 46rpx;
+}
+.muyulu{
+  height: 42rpx;
+  width: 23rpx;
+}
+.lightMuyulu{
+  height: 46rpx;
+  width: 43rpx;
+}
+button {
+  border-radius: 0;
+  background-color:rgba(255,255,255,0);
+  /* height: 100rpx; */
+  /* width: 87rpx; */
+  /* position: absolute; */
+   /* top: -100rpx; */
+ z-index: 101;
+}
+button:hover {
+  border-radius: 0;
+  background-color:rgba(255,255,255,0);
+  /* height: 100rpx; */
+  /* width: 87rpx; */
+  /* position: absolute; */
+   /* top: -100rpx; */
+  z-index: 101;
+}
+.button-hover {
+ background-color:rgba(255,255,255,0);
+}
+.shareIcon{
+  position: absolute;
+  top: -100rpx;
+  margin-top: 0;
+  z-index: 100;
+}
+button::after {
+  border: none;
+}
+.shareLeft{
+  position: relative;
+}
+.shareBox{
+  margin: 62rpx 22rpx;
+  position: relative;
+  height: 169rpx;
+   width: 706rpx;
+  border-radius: 50px;
+  box-shadow: 0px 1px 9px 1px rgba(3,0,0,0.1);
+}
+.shareImggif{
+  width: 706rpx;
+  height: 169rpx;
+   position: absolute;
+   left: 0;
+}
+.shareText{
+  text-align: center;
+  margin-left: 24rpx;
+  margin-top: 30rpx;
+}
+.shareImg{
+  height: 185rpx;
+  width: 225rpx;
+  margin-top: -40rpx;
+}
+.line{
+  display: inline-block;
+  height: 10rpx; 
+  width: 20rpx;
+  border-top: 1rpx solid #edecf2;
+  line-height: 24rpx;
+}
+.leftLine{
+  margin-right: 12rpx;
+}
+.rightLine{
+  margin-left: 12rpx;
+}
+.sharebuttonIcon{
+  height: 122rpx;
+  width: 122rpx;
+}
+.buttonNostyle{
+  position: absolute;
+  top: 0rpx;
+  height: 65rpx;
+  width: 165rpx;
+
+}
+.shareRight{
+  position: absolute;
+  right: 10rpx;
+  top: 28rpx;
+}
+.none{
+  display: none;
+}
+.qiIcon{
+  height: 22rpx;
+  width: 22rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 38rpx;
+}
+.tuiguangBox{
+  margin: 62rpx 22rpx 52rpx;
+}
+.tuiguangImg{
+  width: 706rpx;
+  height: 300rpx;
+  border-radius: 20rpx;
+}
+.officialBox{
+  padding: 0rpx 22rpx 62rpx;
+}
+.shareCode{
+  height: 37rpx;
+  width: 85rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.textBox{
+  text-align: center;
+  font-size: 24rpx;
+   color: #000;
+   line-height: 37rpx;
+}
+.textView{
+  font-size: 24rpx;
+  color: #000;
+  padding-top: 15rpx;
+  text-align: center
+}
+    
+/**index.wxss**/
+.button{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+block{
+  position: relative;
+}
+.aon{
+  position: absolute;
+  white-space:nowrap;/* 防止向下换行*/
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+  background: rgba(0,0,0,0.6);
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  border-radius: 40rpx;
+  color: #fff;
+  z-index: 5;
+  font-size: 22rpx;
+}
+.aon1{
+  position: absolute;
+  white-space:nowrap;/* 防止向下换行*/
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+  background: rgba(249,231,1,0.9);
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  border-radius: 40rpx;
+  color: #232323;
+  z-index: 5;
+  font-size: 22rpx;
+}
+.doommview{
+  z-index: 3;
+  height: 400rpx;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  font-size: 22rpx;
+}
+
+@keyframes first{
+  from{left: 100%; }
+  to{left: -100%;}
+}
+.jindutiaoBox{
+  width: 706rpx;
+  justify-content: center;
+  margin: 100rpx 22rpx 60rpx;
+  line-height: 46rpx;
+
+}
+.percent{
+  border-radius: 20px;
+  width: 560rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  border: 5px solid #ececec;
+  background: #efefef;
+  font-size: 20rpx;
+  position: relative;
+}
+.valueStart{
+  margin-right: 12rpx;
+}
+.valueEnd{
+  margin-left: 12rpx;
+}
+
+.warmTextBox{
+  position: relative;
+  top: 30rpx;
+  width: 706rpx;
+}
+.liwu{
+  width: 54rpx;
+  height: 60rpx;
+  margin-top: -10rpx;
+  margin-left: 10rpx;
+}
+.warmText{
+  background: #feb6af;
+  color: #3b0707;
+  padding: 12rpx 10rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+  position: absolute;
+  top: -5rpx;
+  min-width: 208rpx;
+}
+.percentText{
+  position: absolute;
+  z-index: 100;
+  width: 0;
+  height: 0;
+  top: -32rpx;
+  margin-left: -15rpx;
+  border-right: 15rpx solid transparent;
+  border-left: 15rpx  solid transparent;
+  border-top: 18rpx solid #feb6af;
+}
+.percentTextone{
+  margin-left: -25rpx;
+}
+.percentTexttwo{
+  margin-left: -28rpx;
+}
+.percentNumber{
+  background: -webkit-linear-gradient(0deg, #fae4ac, #feb6af);
+  border-radius: 20px;
+  position:relative;
+  top: 0;
+}
+.percentNumber::after{
+    content: '';
+    position: absolute;
+    width: 54rpx;
+    height: 54rpx;
+    right: -23rpx;
+    background: url('https://oss.ifxj.com/lanmao/health/point.png') center center no-repeat;
+    background-size: 100% 100%;
+    top: -15rpx;
+}
+.percentNumberone::after{
+    content: '';
+    position: absolute;
+    width: 56rpx;
+    height: 56rpx;
+    right: -25rpx;
+    background: url('https://oss.ifxj.com/lanmao/health/point.png') center center no-repeat;
+    background-size: 100% 100%;
+    top: -9rpx;
+}
+.showCount{
+  position: absolute;
+  margin: 0 auto;
+ padding: 10rpx 0;
+ background: #fff2f2;
+ text-align: center;
+  border-radius: 0 40rpx 40rpx 0;
+  overflow: hidden;
+  height: 25px;
+  min-width: 105px;
+  z-index: 3;
+  font-size: 12px;
+  top: 10px;
+}
+.headIcon{
+  height: 30rpx;
+  width: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10rpx;
+  margin-left: -8rpx;
+}
+.headText{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.extraBox{
+  border-bottom: 15rpx solid #f8f8f8;
+  padding: 40rpx 22rpx;
+}
+.gqIcon{
+  height: 45rpx;
+  width: 45rpx;
+  margin-left: 22rpx;
+}
+.subTile{
+  margin-top: 27rpx;
+}
+.publishDt{
+  flex-shrink:0;
+  height: 66rpx;
+  width: 66rpx;
+  margin-right: 20rpx;
+}
+.extraContent{
+  padding: 0rpx;
+  box-shadow: 0 2rpx 20rpx 0 rgba(0,2,202,0.16);
+  border-radius: 10rpx;
+}
+.eatraTitle {
+  margin-bottom: 40rpx;
+}
+.borderLine{
+  border-bottom:1rpx solid #cfcfcf;
+}
+.flexBox{
+  padding: 42rpx 0;
+  margin: 0rpx 10rpx;
+}
+.marginTop{
+  margin-top: -10rpx;
+}
+.marginbottom{
+  margin-bottom: 12rpx;
+}
+.marginright{
+  margin-right: 10rpx;
+}
+.letter{
+  letter-spacing: 2rpx;
+}
+.marginleft{
+  margin-left:12rpx;
+}
+/* .authorizeContentphone .phoneauthorizeButton {
+  margin-top: 370rpx;
+} */
+.goButton{
+  position: relative;
+  background: #ed918a;
+  height: 65rpx;
+  width: 165rpx;
+  line-height: 65rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 33rpx;
+}
+.buttonBox{
+  position: absolute;
+  top: 190rpx;
+  width: 518rpx;
+  height: 164rpx;
+  left: 116rpx;
+}
+.nologinButton{
+  position: absolute;
+  width: 518rpx;
+  height: 164rpx;
+  z-index: 100;
+}
+.marquee_box {position:relative;} 
+.tongzhi{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 15rpx;
+}
+
+
+
+.example {
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  position: absolute;
+  color: #fff;
+  background:rgba(0,0,0,0.5);
+}
+.marquee_box {
+  margin: 0 0 0 60rpx;
+  position: relative;
+  color:#fff;
+  height:60rpx;
+  display:block;
+  overflow:hidden;
+}
+.marquee_text {
+  white-space: nowrap;
+  top: 0;
+  position:absolute;
+  font-size:13px;
+  height:60rpx;
+  line-height:60rpx;
+}
+
+/* 徽章 */
+.hzIcon{
+  width: 70rpx;
+  height: 72rpx;
+}
+.lightColor{
+  color: #fff;
+  padding: 3rpx;
+  border-radius: 20rpx;
+  font-size: 18rpx;
+  text-align: center;
+  /* transform: scale(0.5) */
+}
+
+.greycolor{
+  background: #919191;
+}
+.margin10{
+  margin-right:10rpx;
+  text-align: center;
+  width: 180rpx;
+}
+
+
+
+
+
+
+

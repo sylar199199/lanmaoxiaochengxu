@@ -1,0 +1,71 @@
+<view class="contentBox">
+  <authorize showAuthorize="{{showAuthorize}}" source='{{source}}' bind:myevent="onevent"></authorize>
+  <scroll-view scroll-y style="height:100vh;"  bindscrolltolower="onReachBottom"  bindtouchstart='touchStart'
+  bindtouchend='touchEnd'
+  bindtouchmove='touchMove'>
+    <view wx:if="{{showRefresh}}" style='width:100%;position:relative;padding:40rpx 0;'>
+    <view class="text-gray font24 colorGrey" style='position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);'>
+      <view wx:if="{{freshStatus == 'fresh'}}" class="flex">
+        <view class="lzy-loading"></view>
+       <image style="width:448rpx;height:80rpx;" src='{{fresh}}'></image>
+      </view>
+      <view class="text" wx:elif="{{freshStatus == 'more'}}">
+        <!-- 使用到了 colorUI 下拉箭头图标 -->
+        <text class="cuIcon-refresharrow"></text> 继续下拉刷新
+      </view>
+      <view class="text" wx:else>
+        <image style="width:448rpx;height:80rpx;" src='{{fresh}}'></image>
+      </view>
+    </view>
+  </view>
+  <view class=''>
+  <!-- <view bindtap='deleteItem'>删除</view> -->
+      <view  style="width:100%" class="content"  wx:if='{{hasData}}'>
+        <view class="img_item">
+          <view class='imgBox' wx:for="{{col1}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+            <image src="{{item.imgUrl}}"  class="imgUrl" mode="widthFix"></image>
+            <view class='title font24 colorBlack'>{{item.title}}</view>
+            <view class='nickNameBox flexBetween'>
+              <view class="leftBox">
+                <image class='nickUrl' src="{{item.userHeadimgurl}}"></image>
+                <text class="nickName colorGrey font24">{{item.userNickname}}</text>
+              </view>
+              <view class="rightBox" data-direct="col1" data-id='{{item.id}}' data-index="{{index}}" data-liked="{{item.liked}}" catchtap='cancleLike'>
+                <image class='nolikeicon'   wx:if="{{item.liked}}" src="{{likeicon}}" ></image>
+                <image class='nolikeicon' wx:if="{{!item.liked}}" src="{{nolikegrey}}"></image>
+                <text class="{{item.liked?'nickName colorBlack font22':'nickName colorGrey font22'}}">{{item.likeCount}}</text>
+              </view>
+            </view> 
+          </view>
+        </view>
+        <view class="img_item rightItem">
+          <view class='imgBox' wx:for="{{col2}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+            <image src="{{item.imgUrl}}" class="imgUrl" mode="widthFix"></image>
+            <view class='title font24 colorBlack'>{{item.title}}</view>
+            <view class='nickNameBox flexBetween'>
+              <view class="leftBox">
+                <image class='nickUrl' src="{{item.userHeadimgurl}}"></image>
+                <text class="nickName colorGrey font24">{{item.userNickname}}</text>
+              </view>
+              <view class="rightBox" data-direct="col2" data-id='{{item.id}}' data-index="{{index}}" data-liked="{{item.liked}}" catchtap='cancleLike'>
+                <image class='nolikeicon'  wx:if="{{item.liked}}" src="{{likeicon}}" ></image>
+                <image class='nolikeicon'wx:if="{{!item.liked}}" src="{{nolikegrey}}" ></image>
+                <text class="{{item.liked?'nickName colorBlack font22':'nickName colorGrey font22'}}">{{item.likeCount}}</text>
+              </view>
+            </view> 
+          </view>
+        </view>
+      </view>
+   
+   <view class='publishBox'>
+      <image class='publishIcon' bindtap='goPublish' src='{{publishIcon}}'></image>
+    </view>
+  </view>
+<view class='noDataBox' wx:if='{{!hasData && showdata}}'>
+      <image class='nodataImg' src='{{nocontent}}'></image>
+      <view class='nodataText font26 colorGrey'>暂无数据</view>
+  </view>
+  <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+  <view class="loading" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+  </scroll-view>
+</view>

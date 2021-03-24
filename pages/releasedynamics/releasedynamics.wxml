@@ -1,0 +1,80 @@
+<view class='container' style="height: 100%;">
+    <!-- <view class="tabNav" style='height:{{navHeight}}px;background:#fff;line-height:{{navHeight/2}}px;'>
+        <view class="tabBox" style='height:{{navHeight-navTop}}px;margin-top:{{navTop}}px'>
+            <image class='navbar-title' bindtap='goback' src='https://oss.ifxj.com/lanmao/health/backIcon.png' >
+                </image>
+        </view>
+    </view> -->
+    <view class="question-input-area">
+        <view class="banddialog" wx:if='{{showbindTime}}'>
+            <view class="banddialogContent">
+                <text >由于您发布了与话题规范不符的动态，发布动态被禁止3日，请于{{time}}后再来。如有疑问，请添加懒猫微信：lcat_007获悉详细</text>
+            </view>
+        </view>
+        <view class="contentBox">
+            <!-- <image  bindtap='savedraft' data-back="back"  class="backIcon" src="https://oss.ifxj.com/lanmao/health/shanchu416.png"></image> -->
+            <view class="weui-uploader">
+                <view class="img-v weui-uploader__bd flexwrap">
+                    <view class='pic' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+                        <image class='weui-uploader__img ' src="{{item.imgUrl}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+                            <icon type='cancel' color='#fff' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+                            <view wx:if="{{index == 0}}" class="firstImg">
+                                <text class="fenming font24 colorfff">封面</text>
+                            </view>
+                        </image>
+                    </view>
+                    <!-- 用来提示用户上传图片 -->
+                    <view class="weui-uploader__input-box pic" bindtap="chooseImg" wx:if="{{imgs.length < 9}}">
+                        <image class='addFile' src='https://oss.ifxj.com/lanmao/health/addphone.png'></image>
+                    </view>
+                </view>
+            </view>
+            <!-- 标题区域 -->
+            <view class="question-title-wrap flex">
+                <!-- 标题输入框 -->
+                <input class="question-title colorBlack font30" placeholder="标题有趣会有更多赞~" value="{{title}}" maxlength="20" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="handleTitleInput"></input>
+                <!-- 标题输入字数统计 -->
+                <text class="title-input-counter color999 font24">{{titleCount}}/20</text>
+            </view>
+            <!-- 问题正文区域 -->
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">
+                        <!-- 多行输入框 -->
+                        <textarea class="weui-textarea font26" wx:if='{{!showbindTime}}' placeholder="说说此刻的心情" value="{{content}}" maxlength="2000" placeholder-style="color:#b3b3b3;font-size:14px;" bindinput="handleContentInput" />
+                        <!-- 正文输入字数统计 -->
+                        <view class="weui-textarea-counter color999 font24">
+                            {{contentCount}}/2000
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class='selectTopicBox flexBetween weui-cell__bd' bindtap='openPop'>
+                <text class='fontweight font28'>#参与话题</text>
+                <view class="flex centerBox">
+                    <text class="font26 colorGrey">{{topicName}}</text>
+                    <image class="rightIcon"  src='https://oss.ifxj.com/lanmao/health/SpctIcon.png'></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footBox flexBetween" >
+            <view class="footLeft">
+                <image class="caogaoIcon" src='https://oss.ifxj.com/lanmao/health/caogao.png'></image>
+                <text class="font28 color999 caogaotext" bindtap='savedraft'>存草稿</text>
+            </view>
+            <view class='footRight colorfff font34' bindtap='publishContent'>发布动态</view>
+    </view>
+    <view class='zhezhao ' hidden="{{flag}}" bindtap="closePop">
+        <!--这是一个遮罩层，在框弹出后遮住框外区域-->
+    </view>
+  <!--这是下拉框中的内容，一个文本框和一个按钮，按钮触发拉起事件，表示拉起下拉框-->
+  <view class="guigeBox {{test=='openPop'?'openPop ':'closePop'}}" style='display:{{yesorno}}; '>
+    <image class='closeIcon ' bindtap="closePop" src='https://oss.ifxj.com/lanmao/health/colseCode.png '></image>
+    <view class='popContent'>
+        <view wx:for="{{topicData}}" class="{{item.isSelect?'topicName font24 backgrey':'topicName font26'}}" data-id="{{item.id}}" data-name="{{item.name}}" bindtap='getTopiccontent'>
+            <text class="fontweight">{{item.point}}</text>{{item.name}}
+        </view>
+    </view>
+  </view>
+</view>

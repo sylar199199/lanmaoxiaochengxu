@@ -1,0 +1,6 @@
+<!--components/navbar/index.wxml-->
+<view class="navbar" style='height:{{navHeight}}px;background:#fff'>
+  <view class='navbar-title' style='top:{{navTop}}px'>
+    {{userName}}
+  </view>
+</view>
